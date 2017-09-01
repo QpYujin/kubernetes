@@ -1,0 +1,70 @@
+apiVersion: v1
+kind: List
+items:
+  - apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: consensusnode
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: consensusnode
+      namespace: consensusnode
+      labels:
+        app: consensusnode
+        role: web
+        dns: route53
+      annotations:
+        domainName: consensusnode.deploybytes.com
+    spec:
+      type: LoadBalancer
+      ports:
+        - name: web
+          port: 80
+          targetPort: web
+          protocol: TCP
+        - name: connection
+          port: 3000
+          targetPort: connection
+          protocol: TCP
+      selector:
+        app: consensusnode
+        role: web
+  - apiVersion: extensions/v1beta1
+    kind: Deployment
+    metadata:
+      name: consensusnode
+      namespace: consensusnode
+    spec:
+      replicas: 3
+      strategy:
+        type: RollingUpdate
+      revisionHistoryLimit: 10
+      selector:
+        matchLabels:
+          app: consensusnode
+          role: web
+      template:
+        metadata:
+          labels:
+            app: consensusnode
+            role: web
+          annotations:
+            consul.register/enabled: 'true'
+        spec:
+          containers:
+            - name: consensusnode
+              image: kokyj93/consensus
+              imagePullPolicy: Always
+              resources:
+                limits:
+                  cpu: 100m
+                  memory: 250Mi
+                requests:
+                  cpu: 10m
+                  memory: 125Mi
+              ports:
+                - name: web
+                  containerPort: 3001
+                - name: connection
+                  containerPort: 3000

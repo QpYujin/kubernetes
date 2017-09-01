@@ -1,0 +1,101 @@
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: tarabalam
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: tarabalam
+    namespace: tarabalam
+    labels:
+      app: tarabalam
+      role: web
+      dns: route53
+    annotations:
+      domainName: "tarabalam.deploybytes.com"
+  spec:
+    type: LoadBalancer
+    ports:
+    - name: main
+      port: 3000
+      targetPort: main
+      protocol: TCP
+    - name: cron
+      port: 3001
+      targetPort: cron
+      protocol: TCP
+    - name: worker
+      port: 3002
+      targetPort: worker
+      protocol: TCP
+    selector:
+      app: tarabalam
+      role: web
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    name: tarabalam
+    namespace: tarabalam
+  spec:
+    replicas: 3
+    strategy:
+      type: RollingUpdate
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: tarabalam
+        role: web
+    template:
+      metadata:
+        labels:
+          app: tarabalam
+          role: web
+      spec:
+        containers:
+        - name: main
+          image: index.docker.io/qpair/app
+          imagePullPolicy: Always
+          command: [ "npm", "start" ]
+          resources:
+            limits:
+              cpu: 100m
+              memory: 250Mi
+            requests:
+              cpu: 10m
+              memory: 125Mi
+          ports:
+          - name: main
+            containerPort: 3000
+        - name: cron
+          image: index.docker.io/qpair/app
+          imagePullPolicy: Always
+          command: [ "node", "cron.js" ]
+          resources:
+            limits:
+              cpu: 100m
+              memory: 250Mi
+            requests:
+              cpu: 10m
+              memory: 125Mi 
+          ports:
+          - name: cron
+            containerPort: 3000
+        - name: worker
+          image: index.docker.io/qpair/app
+          imagePullPolicy: Always
+          command: [ "node", "cron.js" ]
+          resources:
+            limits:
+              cpu: 100m
+              memory: 250Mi
+            requests:
+              cpu: 10m
+              memory: 125Mi
+          ports:
+          - name: worker
+            containerPort: 3000
+        imagePullSecrets:
+          - name: myregistrykey

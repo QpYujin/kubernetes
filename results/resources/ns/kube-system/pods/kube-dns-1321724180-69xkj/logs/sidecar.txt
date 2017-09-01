@@ -1,0 +1,4 @@
+ERROR: logging before flag.Parse: I0810 15:08:52.316200       1 main.go:49] Version v1.14.0-2-g38b2ca3
+ERROR: logging before flag.Parse: I0810 15:08:52.316240       1 server.go:45] Starting server (options {DnsMasqPort:53 DnsMasqAddr:127.0.0.1 DnsMasqPollIntervalMs:5000 Probes:[{Label:kubedns Server:127.0.0.1:10053 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1} {Label:dnsmasq Server:127.0.0.1:53 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}] PrometheusAddr:0.0.0.0 PrometheusPort:10054 PrometheusPath:/metrics PrometheusNamespace:kubedns})
+ERROR: logging before flag.Parse: I0810 15:08:52.316274       1 dnsprobe.go:75] Starting dnsProbe {Label:kubedns Server:127.0.0.1:10053 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}
+ERROR: logging before flag.Parse: I0810 15:08:52.316357       1 dnsprobe.go:75] Starting dnsProbe {Label:dnsmasq Server:127.0.0.1:53 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}

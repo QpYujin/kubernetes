@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: robomongo
+spec:
+  replicas: 1
+  selector:
+    app: robomongo
+  template:
+    metadata:
+      labels:
+        app: robomongo
+    spec:
+      containers:
+      - name: kafka
+        image: tianon/robomongo
+        ports:
+        - containerPort: 3700
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: robomongo
+  labels:
+    app: robomongo
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3700
+    name: robomongo
+    targetPort: 3700
+    protocol: TCP
+  selector:
+    app: robomongo
+

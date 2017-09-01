@@ -1,0 +1,110 @@
+I0810 15:15:46.225836       1 service_listener.go:38] Route53 Update Service
+I0810 15:15:46.227869       1 service_listener.go:80] Connected to kubernetes @ https://100.64.0.1:443
+I0810 15:15:46.229336       1 service_listener.go:116] Starting Service Polling every 30s
+I0810 15:15:46.270666       1 service_listener.go:123] Found 0 DNS services in all namespaces with selector "dns=route53"
+I0810 15:16:16.272986       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+W0810 15:16:16.273006       1 service_listener.go:128] Couldn't find hostname: No ingress defined for ELB
+I0810 15:16:46.275204       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:16:46.275267       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:16:46.397831       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: ec9ca510-7dde-11e7-803f-df08bff0b7c6
+I0810 15:17:16.400315       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:17:16.400338       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:17:16.559401       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: fe96b203-7dde-11e7-bf63-6b6e1d899215
+I0810 15:17:46.561725       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:17:46.561747       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:17:46.632290       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 10828e84-7ddf-11e7-bd03-b305dbc53733
+I0810 15:18:16.634441       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:18:16.634462       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:18:17.095433       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 227d3791-7ddf-11e7-ab61-1db2b85a16ee
+I0810 15:18:47.098054       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:18:47.098075       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:18:47.168075       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 3498b004-7ddf-11e7-a8c1-f337669cd853
+I0810 15:19:17.171423       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:19:17.171510       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:19:17.317729       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 46904b12-7ddf-11e7-8032-a3c2718b9269
+I0810 15:19:47.320307       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:19:47.320330       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:19:47.408157       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 587f34b5-7ddf-11e7-bd07-d9dad48c7489
+I0810 15:20:17.410576       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:20:17.410599       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:20:17.512409       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 6a715316-7ddf-11e7-bdd6-95bc9070378b
+I0810 15:20:47.514698       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:20:47.514722       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:20:47.636924       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 7c651e7d-7ddf-11e7-acce-611aaa346953
+I0810 15:21:17.639815       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:21:17.639906       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:21:17.711559       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 8e53924b-7ddf-11e7-8139-8ba125a539d2
+I0810 15:21:47.713887       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:21:47.713909       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:21:47.784438       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: a03eab7a-7ddf-11e7-8267-cdce7be3df0c
+I0810 15:22:17.787004       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:22:17.787026       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:22:17.860552       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: b22caa2e-7ddf-11e7-8267-cdce7be3df0c
+I0810 15:22:47.863140       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:22:47.863163       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:22:47.929520       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: c4192339-7ddf-11e7-8267-cdce7be3df0c
+I0810 15:23:17.932562       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:23:17.932588       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:23:18.010726       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: d6074889-7ddf-11e7-b028-119a98d9f3b4
+I0810 15:23:48.013088       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:23:48.013113       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:23:48.089767       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: e7f3e84f-7ddf-11e7-9aec-91feb9908b0e
+I0810 15:24:18.092208       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:24:18.092230       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:24:18.240118       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: f9ed0b40-7ddf-11e7-9aec-91feb9908b0e
+I0810 15:24:48.246149       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:24:48.246167       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:24:48.386255       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 0be4a6d0-7de0-11e7-96ad-e9ac5208c9ee
+I0810 15:25:18.389210       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:25:18.389236       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:25:18.541990       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 1ddd2da5-7de0-11e7-aa01-c5866220620f
+I0810 15:25:48.544322       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:25:48.544344       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:25:48.903054       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 2ff6d044-7de0-11e7-bd03-b305dbc53733
+I0810 15:26:18.905372       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:26:18.905395       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:26:18.990506       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 41e62f37-7de0-11e7-9151-87489f4b7aa0
+I0810 15:26:48.992958       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:26:48.992980       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:26:49.158353       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 53e0d885-7de0-11e7-8032-a3c2718b9269
+I0810 15:27:19.162452       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:27:19.162480       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:27:19.237764       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 65d1216b-7de0-11e7-8d10-350589d17dee
+I0810 15:27:49.239838       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:27:49.239860       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:27:49.381500       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 77c7ac26-7de0-11e7-ab61-1db2b85a16ee
+I0810 15:28:19.383853       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:28:19.383877       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:28:19.452982       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 89b4722f-7de0-11e7-b2f1-9b0de897ce05
+I0810 15:28:49.455628       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:28:49.455652       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:28:49.536473       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: 9ba07525-7de0-11e7-abd0-61408c5206c8
+I0810 15:29:19.539589       1 service_listener.go:123] Found 1 DNS services in all namespaces with selector "dns=route53"
+I0810 15:29:19.539613       1 service_listener.go:142] Creating DNS for fluentd-logging service: ada60e03d7dde11e7bf000ea50f7b4c4-88815891.us-east-1.elb.amazonaws.com -> fluentd.deploybytes.com
+W0810 15:29:19.647794       1 service_listener.go:151] Couldn't find destination zone: No zone found for deploybytes.com: AccessDenied: User: arn:aws:sts::921992833788:assumed-role/masters.deploybytes.com/i-02f038eaf1cfbe5be is not authorized to perform: route53:ListHostedZonesByName
+	status code: 403, request id: ad94b696-7de0-11e7-a906-e5d17b11b285

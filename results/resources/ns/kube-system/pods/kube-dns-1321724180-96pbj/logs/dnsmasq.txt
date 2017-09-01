@@ -1,0 +1,15 @@
+I0810 15:08:55.030494       1 main.go:76] opts: {{/usr/sbin/dnsmasq [-k --cache-size=1000 --log-facility=- --server=/cluster.local/127.0.0.1#10053 --server=/in-addr.arpa/127.0.0.1#10053 --server=/in6.arpa/127.0.0.1#10053] true} /etc/k8s/dns/dnsmasq-nanny 10000000000}
+I0810 15:08:55.030627       1 nanny.go:86] Starting dnsmasq [-k --cache-size=1000 --log-facility=- --server=/cluster.local/127.0.0.1#10053 --server=/in-addr.arpa/127.0.0.1#10053 --server=/in6.arpa/127.0.0.1#10053]
+I0810 15:08:55.116057       1 nanny.go:111] 
+W0810 15:08:55.116104       1 nanny.go:112] Got EOF from stdout
+I0810 15:08:55.116118       1 nanny.go:108] dnsmasq[10]: started, version 2.76 cachesize 1000
+I0810 15:08:55.116182       1 nanny.go:108] dnsmasq[10]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN DHCP DHCPv6 no-Lua TFTP no-conntrack ipset auth no-DNSSEC loop-detect inotify
+I0810 15:08:55.116202       1 nanny.go:108] dnsmasq[10]: using nameserver 127.0.0.1#10053 for domain in6.arpa 
+I0810 15:08:55.116206       1 nanny.go:108] dnsmasq[10]: using nameserver 127.0.0.1#10053 for domain in-addr.arpa 
+I0810 15:08:55.116211       1 nanny.go:108] dnsmasq[10]: using nameserver 127.0.0.1#10053 for domain cluster.local 
+I0810 15:08:55.116220       1 nanny.go:108] dnsmasq[10]: reading /etc/resolv.conf
+I0810 15:08:55.116224       1 nanny.go:108] dnsmasq[10]: using nameserver 127.0.0.1#10053 for domain in6.arpa 
+I0810 15:08:55.116232       1 nanny.go:108] dnsmasq[10]: using nameserver 127.0.0.1#10053 for domain in-addr.arpa 
+I0810 15:08:55.116236       1 nanny.go:108] dnsmasq[10]: using nameserver 127.0.0.1#10053 for domain cluster.local 
+I0810 15:08:55.116244       1 nanny.go:108] dnsmasq[10]: using nameserver 172.20.0.2#53
+I0810 15:08:55.116248       1 nanny.go:108] dnsmasq[10]: read /etc/hosts - 7 addresses

@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: default
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: mitmongo
+    namespace: default
+    labels:
+      app: mitmongo
+      role: web
+      #dns: route53
+    annotations:
+      external-dns.alpha.kubernetes.io/hostname: mitmongo.deploybytes.com.
+      #domainName: "mitmongo.deploybytes.com"
+  spec:
+    type: LoadBalancer
+    ports:
+    - name: backend
+      port: 80
+      targetPort: backend
+      #protocol: TCP
+    selector:
+      app: mitmongo
+      role: web
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    name: mitmongo
+    namespace: default
+  spec:
+    replicas: 3
+    strategy:
+      type: RollingUpdate
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: mitmongo
+        role: web
+    template:
+      metadata:
+        labels:
+          app: mitmongo
+          role: web
+      spec:
+        containers:
+        - name: mitmongo
+          image: qpair/client:latest
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 100m
+              memory: 250Mi
+            requests:
+              cpu: 10m
+              memory: 125Mi
+          ports:
+          - name: backend
+            containerPort: 3000
+        imagePullSecrets:
+        - name: myregistrykey

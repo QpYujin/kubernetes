@@ -1,0 +1,6 @@
+I0810 15:15:56.393758       1 heapster.go:72] /heapster --source=kubernetes.summary_api:''
+I0810 15:15:56.393792       1 heapster.go:73] Heapster version v1.3.0
+I0810 15:15:56.393940       1 configs.go:61] Using Kubernetes client with master "https://100.64.0.1:443" and version v1
+I0810 15:15:56.393952       1 configs.go:62] Using kubelet port 10255
+I0810 15:15:56.394649       1 heapster.go:196] Starting with Metric Sink
+I0810 15:15:56.597933       1 heapster.go:106] Starting heapster on port 8082

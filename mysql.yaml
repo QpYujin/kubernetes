@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: List
+items:
+  - apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: flaskmysql
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: flaskmysql
+      namespace: flaskmysql
+      labels:
+        app: flaskmysql
+        role: web
+        dns: route53
+      annotations:
+        domainName: flaskmysql.deploybytes.com
+    spec:
+      type: LoadBalancer
+      ports:
+        - name: web
+          port: 80
+          targetPort: web
+          protocol: TCP
+      selector:
+        app: flaskmysql
+        role: web
+  - apiVersion: extensions/v1beta1
+    kind: Deployment
+    metadata:
+      name: flaskmysql
+      namespace: flaskmysql
+    spec:
+      replicas: 3
+      strategy:
+        type: RollingUpdate
+      revisionHistoryLimit: 10
+      selector:
+        matchLabels:
+          app: flaskmysql
+          role: web
+      template:
+        metadata:
+          labels:
+            app: flaskmysql
+            role: web
+          annotations:
+            consul.register/enabled: 'true'
+        spec:
+          containers:
+            - name: flaskmysql
+              image: kokyj93/flask-mysql
+              imagePullPolicy: Always
+              env:
+              - name: "MYSQL_DATABASE"
+                value: "test"
+                name: "MYSQL_USER"
+                value: "test"
+                name: "MYSQL_PASSWORD"
+                value: "test"
+                name: "MYSQL_ROOT_PASSWORD"
+                value: "root"
+              resources:
+                limits:
+                  cpu: 100m
+                  memory: 250Mi
+                requests:
+                  cpu: 10m
+                  memory: 125Mi
+              ports:
+                - name: web
+                  containerPort: 3306

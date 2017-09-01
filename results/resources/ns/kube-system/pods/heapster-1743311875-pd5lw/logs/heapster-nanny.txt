@@ -1,0 +1,4 @@
+I0810 15:15:57.693193       1 pod_nanny.go:56] Invoked by [/pod_nanny --cpu=80m --extra-cpu=0.5m --memory=140Mi --extra-memory=4Mi --threshold=5 --deployment=heapster --container=heapster --poll-period=300000 --estimator=exponential]
+I0810 15:15:57.693248       1 pod_nanny.go:68] Watching namespace: kube-system, pod: heapster-1743311875-pd5lw, container: heapster.
+I0810 15:15:57.693254       1 pod_nanny.go:69] cpu: 80m, extra_cpu: 0.5m, memory: 140Mi, extra_memory: 4Mi, storage: MISSING, extra_storage: 0Gi
+I0810 15:15:57.693647       1 pod_nanny.go:110] Resources: [{Base:{i:{value:80 scale:-3} d:{Dec:<nil>} s:80m Format:DecimalSI} ExtraPerNode:{i:{value:5 scale:-4} d:{Dec:<nil>} s: Format:DecimalSI} Name:cpu} {Base:{i:{value:146800640 scale:0} d:{Dec:<nil>} s:140Mi Format:BinarySI} ExtraPerNode:{i:{value:4194304 scale:0} d:{Dec:<nil>} s:4Mi Format:BinarySI} Name:memory}]

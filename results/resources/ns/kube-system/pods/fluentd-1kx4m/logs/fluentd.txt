@@ -1,0 +1,397 @@
+2017-08-10 15:16:27 +0000 [info]: reading config file path="/fluentd/etc/fluent.conf"
+2017-08-10 15:16:27 +0000 [info]: starting fluentd-0.12.33
+2017-08-10 15:16:28 +0000 [info]: gem 'fluent-plugin-elasticsearch' version '1.9.5'
+2017-08-10 15:16:28 +0000 [info]: gem 'fluent-plugin-kubernetes_metadata_filter' version '0.27.0'
+2017-08-10 15:16:28 +0000 [info]: gem 'fluent-plugin-record-reformer' version '0.9.0'
+2017-08-10 15:16:28 +0000 [info]: gem 'fluent-plugin-secure-forward' version '0.4.5'
+2017-08-10 15:16:28 +0000 [info]: gem 'fluent-plugin-systemd' version '0.0.8'
+2017-08-10 15:16:28 +0000 [info]: gem 'fluentd' version '0.12.33'
+2017-08-10 15:16:28 +0000 [info]: adding match pattern="fluent.**" type="null"
+2017-08-10 15:16:28 +0000 [info]: adding filter pattern="kubernetes.**" type="kubernetes_metadata"
+2017-08-10 15:16:28 +0000 [info]: adding match pattern="kubernetes.flaskjson" type="elasticsearch"
+2017-08-10 15:16:28 +0000 [info]: adding match pattern="kube-apiserver" type="elasticsearch"
+2017-08-10 15:16:28 +0000 [info]: adding match pattern="kube-controller-manager" type="elasticsearch"
+2017-08-10 15:16:28 +0000 [info]: adding match pattern="kubernetes.var.log.containers.*" type="elasticsearch"
+2017-08-10 15:16:28 +0000 [info]: adding source type="systemd"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: adding source type="tail"
+2017-08-10 15:16:28 +0000 [info]: using configuration file: <ROOT>
+  <source>
+    @type systemd
+    filters [{"_SYSTEMD_UNIT":"kubelet.service"}]
+    pos_file /var/log/fluentd-journald-kubelet.pos
+    read_from_head true
+    tag kubelet
+  </source>
+  <match fluent.**>
+    type null
+  </match>
+  <source>
+    type tail
+    path /var/log/containers/var.log.containers.flaskjson*.log
+    pos_file /var/log/fluentd-containers.log.pos
+    time_format %Y-%m-%dT%H:%M:%S.%NZ
+    tag kubernetes.flaskjson
+    format json
+    read_from_head true
+  </source>
+  <source>
+    type tail
+    format /^(?<time>[^ ]* [^ ,]*)[^\[]*\[[^\]]*\]\[(?<severity>[^ \]]*) *\] (?<message>.*)$/
+    time_format %Y-%m-%d %H:%M:%S
+    path /var/log/salt/minion
+    pos_file /var/log/fluentd-salt.pos
+    tag salt
+  </source>
+  <source>
+    type tail
+    format syslog
+    path /var/log/startupscript.log
+    pos_file /var/log/fluentd-startupscript.log.pos
+    tag startupscript
+  </source>
+  <source>
+    type tail
+    format /^time="(?<time>[^)]*)" level=(?<severity>[^ ]*) msg="(?<message>[^"]*)"( err="(?<error>[^"]*)")?( statusCode=($<status_code>\d+))?/
+    path /var/log/docker.log
+    pos_file /var/log/fluentd-docker.log.pos
+    tag docker
+  </source>
+  <source>
+    type tail
+    format none
+    path /var/log/etcd.log
+    pos_file /var/log/fluentd-etcd.log.pos
+    tag etcd
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/kubelet.log
+    pos_file /var/log/fluentd-kubelet.log.pos
+    tag kubelet
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/kube-proxy.log
+    pos_file /var/log/fluentd-kube-proxy.log.pos
+    tag kube-proxy
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/kube-apiserver.log
+    pos_file /var/log/fluentd-kube-apiserver.log.pos
+    tag kube-apiserver
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/kube-controller-manager.log
+    pos_file /var/log/fluentd-kube-controller-manager.log.pos
+    tag kube-controller-manager
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/kube-scheduler.log
+    pos_file /var/log/fluentd-kube-scheduler.log.pos
+    tag kube-scheduler
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/rescheduler.log
+    pos_file /var/log/fluentd-rescheduler.log.pos
+    tag rescheduler
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/glbc.log
+    pos_file /var/log/fluentd-glbc.log.pos
+    tag glbc
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <source>
+    type tail
+    format kubernetes
+    multiline_flush_interval 5s
+    path /var/log/cluster-autoscaler.log
+    pos_file /var/log/fluentd-cluster-autoscaler.log.pos
+    tag cluster-autoscaler
+    format_firstline /^\w\d{4}/
+    format1 /^(?<severity>\w)(?<time>\d{4} [^\s]*)\s+(?<pid>\d+)\s+(?<source>[^ \]]+)\] (?<message>.*)/
+    time_format %m%d %H:%M:%S.%N
+  </source>
+  <filter kubernetes.**>
+    type kubernetes_metadata
+  </filter>
+  <match kubernetes.flaskjson>
+    type elasticsearch
+    log_level info
+    include_tag_key true
+    host elasticsearch-logging.kube-system
+    port 9200
+    scheme http
+    user elastic
+    password xxxxxx
+    reload_connections true
+    logstash_prefix flaskjson
+    logstash_format true
+    buffer_chunk_limit 2M
+    buffer_queue_limit 32
+    flush_interval 5s
+    max_retry_wait 30
+    disable_retry_limit 
+    num_threads 8
+  </match>
+  <match kube-apiserver>
+    type elasticsearch
+    log_level info
+    include_tag_key true
+    host elasticsearch-logging.kube-system
+    port 9200
+    scheme http
+    user elastic
+    password xxxxxx
+    reload_connections true
+    logstash_prefix logstash
+    logstash_format true
+    buffer_chunk_limit 2M
+    buffer_queue_limit 32
+    flush_interval 5s
+    max_retry_wait 30
+    disable_retry_limit 
+    num_threads 8
+  </match>
+  <match kube-controller-manager>
+    type elasticsearch
+    log_level info
+    include_tag_key true
+    host elasticsearch-logging.kube-system
+    port 9200
+    scheme http
+    user elastic
+    password xxxxxx
+    reload_connections true
+    logstash_prefix logstash
+    logstash_format true
+    buffer_chunk_limit 2M
+    buffer_queue_limit 32
+    flush_interval 5s
+    max_retry_wait 30
+    disable_retry_limit 
+    num_threads 8
+  </match>
+  <match kubernetes.var.log.containers.*>
+    type elasticsearch
+    log_level info
+    include_tag_key true
+    host elasticsearch-logging.kube-system
+    port 9200
+    scheme http
+    user elastic
+    password xxxxxx
+    reload_connections true
+    logstash_prefix logstash
+    logstash_format true
+    buffer_chunk_limit 2M
+    buffer_queue_limit 32
+    flush_interval 5s
+    max_retry_wait 30
+    disable_retry_limit 
+    num_threads 8
+  </match>
+</ROOT>
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [warn]: no patterns matched tag="kubelet"
+2017-08-10 15:16:28 +0000 [info]: following tail of /var/log/etcd.log
+2017-08-10 15:16:28 +0000 [info]: following tail of /var/log/kube-proxy.log
+2017-08-10 15:16:28 +0000 [info]: following tail of /var/log/kube-apiserver.log
+2017-08-10 15:16:28 +0000 [info]: following tail of /var/log/kube-controller-manager.log
+2017-08-10 15:16:28 +0000 [info]: following tail of /var/log/kube-scheduler.log
+2017-08-10 15:17:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:16:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:164:in `rescue in client'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:161:in `client'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:359:in `rescue in send_bulk'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:354:in `send_bulk'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:341:in `write_objects'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/output.rb:490:in `write'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/buffer.rb:354:in `write_chunk'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/buffer.rb:333:in `pop'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/output.rb:342:in `try_flush'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/output.rb:149:in `run'
+2017-08-10 15:17:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:16:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:164:in `rescue in client'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:161:in `client'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:359:in `rescue in send_bulk'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:354:in `send_bulk'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluent-plugin-elasticsearch-1.9.5/lib/fluent/plugin/out_elasticsearch.rb:341:in `write_objects'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/output.rb:490:in `write'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/buffer.rb:354:in `write_chunk'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/buffer.rb:333:in `pop'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/output.rb:342:in `try_flush'
+  2017-08-10 15:17:34 +0000 [warn]: /var/lib/gems/2.3.0/gems/fluentd-0.12.33/lib/fluent/output.rb:149:in `run'
+2017-08-10 15:17:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84bf3c680"
+2017-08-10 15:17:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84b4ad05c"
+2017-08-10 15:18:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:16:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:18:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:18:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:16:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:18:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:19:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:18:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:19:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:19:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:18:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:19:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:19:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84b4ad05c"
+2017-08-10 15:19:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84bf3c680"
+2017-08-10 15:20:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:18:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:20:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:20:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:18:42 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:20:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:21:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:20:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:21:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:21:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:20:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:21:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:21:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84b4ad05c"
+2017-08-10 15:21:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84bf3c680"
+2017-08-10 15:22:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:20:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:22:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:22:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:20:42 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:22:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:23:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:22:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:23:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:23:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:22:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:23:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:23:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84b4ad05c"
+2017-08-10 15:23:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84bf3c680"
+2017-08-10 15:24:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:22:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:24:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:24:34 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:22:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:24:34 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:25:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:24:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:25:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:25:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:24:35 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:25:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:25:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84b4ad05c"
+2017-08-10 15:25:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84bf3c680"
+2017-08-10 15:26:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:24:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:26:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:26:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:24:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:26:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:27:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:26:36 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:27:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:27:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:26:36 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:27:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:27:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84bf3c680"
+2017-08-10 15:27:35 +0000 [warn]: retry succeeded. plugin_id="object:3fa84b4ad05c"
+2017-08-10 15:28:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:26:42 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84bf3c680"
+  2017-08-10 15:28:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:28:35 +0000 [warn]: temporarily failed to flush the buffer. next_retry=2017-08-10 15:26:41 +0000 error_class="Fluent::ElasticsearchOutput::ConnectionFailure" error="Can not reach Elasticsearch cluster ({:host=>\"elasticsearch-logging.kube-system\", :port=>9200, :scheme=>\"http\", :user=>\"elastic\", :password=>\"obfuscated\"})! connect_write timeout reached" plugin_id="object:3fa84b4ad05c"
+  2017-08-10 15:28:35 +0000 [warn]: suppressed same stacktrace
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "goroutine 93557 [running]:"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/httplog.(*respLogger).recordStatus(0xc420ab4620, 0x195)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/httplog/log.go:219 +0xbb"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/httplog.(*respLogger).WriteHeader(0xc420ab4620, 0x195)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/httplog/log.go:198 +0x35"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/github.com/emicklei/go-restful.(*Response).WriteHeader(0xc42508d380, 0x195)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/github.com/emicklei/go-restful/response.go:200 +0x41"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/handlers/responsewriters.WriteObjectNegotiated(0x55039c0, 0xc4201fb0e0, 0x0, 0x0, 0x0, 0x0, 0x54fad80, 0xc42508d380, 0xc423091950, 0x195, ...)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/handlers/responsewriters/writers.go:89 +0x162"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/handlers/responsewriters.ErrorNegotiated(0x54e0040, 0xc421ece700, 0x55039c0, 0xc4201fb0e0, 0x0, 0x0, 0x0, 0x0, 0x54fad80, 0xc42508d380, ...)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/handlers/responsewriters/writers.go:106 +0x103"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/mux.serviceErrorHandler(0x55039c0, 0xc4201fb0e0, 0x195, 0x328fcf8, 0x17, 0xc4225fdfb0, 0xc42508d380)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/mux/container.go:94 +0x13b"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/mux.NewAPIContainer.func2(0x195, 0x328fcf8, 0x17, 0xc4225fdfb0, 0xc42508d380)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/mux/container.go:61 +0x65"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/github.com/emicklei/go-restful.(*Container).dispatch.func5(0xc4225fdfb0, 0xc42508d380)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/github.com/emicklei/go-restful/container.go:250 +0x110"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/github.com/emicklei/go-restful.(*FilterChain).ProcessFilter(0xc4225fdf80, 0xc4225fdfb0, 0xc42508d380)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/github.com/emicklei/go-restful/filter.go:21 +0x95"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/github.com/emicklei/go-restful.(*Container).dispatch(0xc4206a5b90, 0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/github.com/emicklei/go-restful/container.go:254 +0x497"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/github.com/emicklei/go-restful.(*Container).(k8s.io/kubernetes/vendor/github.com/emicklei/go-restful.dispatch)-fm(0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/github.com/emicklei/go-restful/container.go:120 +0x48"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "net/http.HandlerFunc.ServeHTTP(0xc420464750, 0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/usr/local/go/src/net/http/server.go:1726 +0x44"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "net/http.(*ServeMux).ServeHTTP(0xc420736420, 0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/usr/local/go/src/net/http/server.go:2022 +0x7f"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/filters.WithAuthorization.func1(0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/filters/authorization.go:50 +0x365"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "net/http.HandlerFunc.ServeHTTP(0xc42069bc00, 0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/usr/local/go/src/net/http/server.go:1726 +0x44"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/filters.WithImpersonation.func1(0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/filters/impersonation.go:47 +0x1e4d"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "net/http.HandlerFunc.ServeHTTP(0xc42069bc40, 0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/usr/local/go/src/net/http/server.go:1726 +0x44"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/filters.WithAuthentication.func1(0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/filters/authentication.go:73 +0x2c2"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "net/http.HandlerFunc.ServeHTTP(0xc4208c3b80, 0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/usr/local/go/src/net/http/server.go:1726 +0x44"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/request.WithRequestContext.func1(0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/endpoints/request/requestcontext.go:107 +0xef"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "net/http.HandlerFunc.ServeHTTP(0xc4207998c0, 0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/usr/local/go/src/net/http/server.go:1726 +0x44"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/filters.WithPanicRecovery.func1(0x54fc940, 0xc420ab4620, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/filters/wrap.go:74 +0x24a"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "net/http.HandlerFunc.ServeHTTP(0xc420737620, 0x7f690d5242c8, 0xc42223a6b0, 0xc423091950)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/usr/local/go/src/net/http/server.go:1726 +0x44"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/filters.(*timeoutHandler).ServeHTTP.func1(0xc4207999a0, 0x5505100, 0xc42223a6b0, 0xc423091950, 0xc42508d2c0)"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/filters/timeout.go:91 +0x8d"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "created by k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/filters.(*timeoutHandler).ServeHTTP"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "\t/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/server/filters/timeout.go:93 +0x1d1"
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: ""
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: "logging error output: \"{\\\"kind\\\":\\\"Status\\\",\\\"apiVersion\\\":\\\"v1\\\",\\\"metadata\\\":{},\\\"status\\\":\\\"Failure\\\",\\\"message\\\":\\\"the server does not allow this method on the requested resource\\\",\\\"reason\\\":\\\"MethodNotAllowed\\\",\\\"details\\\":{},\\\"code\\\":405}\\n\""
+2017-08-10 15:29:21 +0000 [warn]: pattern not match: " [[e2e.test/v1.7.3 (linux/amd64) kubernetes/2c2fe6e] 100.96.3.4:49870]"
+2017-08-10 15:29:22 +0000 [warn]: pattern not match: "[3.474\xC2\xB5s] [3.474\xC2\xB5s] About to List from storage"
+2017-08-10 15:29:22 +0000 [warn]: pattern not match: "[501.599227ms] [501.595753ms] Listing from storage done"
+2017-08-10 15:29:22 +0000 [warn]: pattern not match: "[501.634708ms] [35.481\xC2\xB5s] Self-linking done"
+2017-08-10 15:29:22 +0000 [warn]: pattern not match: "[501.960536ms] [325.828\xC2\xB5s] Writing http response done (4 items)"
+2017-08-10 15:29:22 +0000 [warn]: pattern not match: "\"List /api/v1/componentstatuses\" [501.961481ms] [945ns] END"

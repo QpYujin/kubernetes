@@ -1,0 +1,33 @@
+dns-controller version 1.6.2
+I0810 15:14:04.142480       1 main.go:201] Ingress controller disabled
+I0810 15:14:04.142520       1 dnscontroller.go:101] starting DNS controller
+I0810 15:14:04.142552       1 dnscontroller.go:154] scope not yet ready: node
+I0810 15:14:04.142597       1 servicecontroller.go:55] starting service controller
+W0810 15:14:04.142617       1 servicecontroller.go:67] querying without label filter
+W0810 15:14:04.142625       1 servicecontroller.go:69] querying without field filter
+I0810 15:14:04.142596       1 podcontroller.go:57] starting pod controller
+W0810 15:14:04.142669       1 podcontroller.go:69] querying without label filter
+W0810 15:14:04.142683       1 podcontroller.go:71] querying without field filter
+I0810 15:14:04.142965       1 nodecontroller.go:56] starting node controller
+W0810 15:14:04.143007       1 nodecontroller.go:71] querying without field filter
+I0810 15:14:04.172111       1 nodecontroller.go:80] node: ip-172-20-51-64.ec2.internal
+I0810 15:14:04.172140       1 dnscontroller.go:606] Update desired state: node/ip-172-20-51-64.ec2.internal: [{A node/ip-172-20-51-64.ec2.internal/internal 172.20.51.64 true} {A node/ip-172-20-51-64.ec2.internal/external 34.207.97.130 true} {A node/role=node/internal 172.20.51.64 true} {A node/role=node/ 172.20.51.64 true} {A node/role=node/external 34.207.97.130 true} {A node/role=node/ ip-172-20-51-64.ec2.internal true} {A node/role=node/ ec2-34-207-97-130.compute-1.amazonaws.com true} {A node/role=node/ ip-172-20-51-64.ec2.internal true}]
+I0810 15:14:04.172578       1 nodecontroller.go:80] node: ip-172-20-54-156.ec2.internal
+I0810 15:14:04.172615       1 dnscontroller.go:606] Update desired state: node/ip-172-20-54-156.ec2.internal: [{A node/ip-172-20-54-156.ec2.internal/internal 172.20.54.156 true} {A node/ip-172-20-54-156.ec2.internal/external 75.101.218.145 true} {A node/role=node/internal 172.20.54.156 true} {A node/role=node/ 172.20.54.156 true} {A node/role=node/external 75.101.218.145 true} {A node/role=node/ ip-172-20-54-156.ec2.internal true} {A node/role=node/ ec2-75-101-218-145.compute-1.amazonaws.com true} {A node/role=node/ ip-172-20-54-156.ec2.internal true}]
+I0810 15:14:04.172636       1 nodecontroller.go:80] node: ip-172-20-55-121.ec2.internal
+I0810 15:14:04.172643       1 dnscontroller.go:606] Update desired state: node/ip-172-20-55-121.ec2.internal: [{A node/ip-172-20-55-121.ec2.internal/internal 172.20.55.121 true} {A node/ip-172-20-55-121.ec2.internal/external 34.207.140.82 true} {A node/role=master/internal 172.20.55.121 true} {A node/role=master/ 172.20.55.121 true} {A node/role=master/external 34.207.140.82 true} {A node/role=master/ ip-172-20-55-121.ec2.internal true} {A node/role=master/ ec2-34-207-140-82.compute-1.amazonaws.com true} {A node/role=master/ ip-172-20-55-121.ec2.internal true}]
+W0810 15:14:04.172678       1 nodecontroller.go:87] querying without field filter
+W0810 15:14:04.173077       1 servicecontroller.go:82] querying without label filter
+W0810 15:14:04.173090       1 servicecontroller.go:84] querying without field filter
+I0810 15:14:04.175995       1 dnscontroller.go:606] Update desired state: pod/kube-system/kube-apiserver-ip-172-20-55-121.ec2.internal: [{_alias api.deploybytes.com. node/ip-172-20-55-121.ec2.internal/external false} {A api.internal.deploybytes.com. 172.20.55.121 false}]
+W0810 15:14:04.176026       1 podcontroller.go:84] querying without label filter
+W0810 15:14:04.176030       1 podcontroller.go:86] querying without field filter
+I0810 15:14:09.142912       1 dnscache.go:75] querying all DNS zones (no cached results)
+I0810 15:14:09.193177       1 dnscontroller.go:256] Using default TTL of 1m0s
+I0810 15:14:09.193203       1 dnscontroller.go:421] Querying all dnsprovider records for zone "deploybytes.com."
+I0810 15:14:09.220089       1 dnscontroller.go:562] will replace existing dns record A api.deploybytes.com.
+I0810 15:14:09.220113       1 dnscontroller.go:566] Adding DNS changes to batch {A api.deploybytes.com.} [34.207.140.82]
+I0810 15:14:09.220125       1 dnscontroller.go:256] Using default TTL of 1m0s
+I0810 15:14:09.220195       1 dnscontroller.go:562] will replace existing dns record A api.internal.deploybytes.com.
+I0810 15:14:09.220205       1 dnscontroller.go:566] Adding DNS changes to batch {A api.internal.deploybytes.com.} [172.20.55.121]
+I0810 15:14:09.220227       1 dnscontroller.go:301] applying DNS changeset for zone deploybytes.com.::Z2EFSHCUN6AXIF

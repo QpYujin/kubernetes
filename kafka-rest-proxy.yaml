@@ -1,0 +1,57 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kafka-rest-proxy
+spec: 
+  replicas: 1
+  strategy: 
+    type: RollingUpdate
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: kafka-rest-proxy
+  template:
+    metadata:
+      labels:
+        app: kafka-rest-proxy
+    spec:
+      containers:
+      - name: kafka-rest-proxy
+        image: confluentinc/cp-kafka-rest:latest
+        imagePullPolicy: Always
+        env:
+        - name: KAFKA_REST_HOST_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: KAFKA_REST_ZOOKEEPER_CONNECT
+          value: "zook:2181"
+        resources:
+          limits:
+            cpu: 200m
+            memory: 300Mi
+          requests:
+            cpu: 100m
+            memory: 150Mi
+        ports:
+        - name: web
+          containerPort: 9093 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-rest-proxy
+  labels:
+    app: kafka-rest-proxy
+    dns: route53
+  annotations:
+    domainName: "kafkaproxy.deploybytes.com"
+spec:
+  type: LoadBalancer
+  ports:
+  - name: kafka-rest-proxy
+    port: 9093
+    targetPort: web
+    protocol: TCP
+  selector:
+    app: kafka-rest-proxy

@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: consensus
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: consensus
+    namespace: consensus
+    labels:
+      app: consensus
+      role: web
+      dns: route53
+    annotations:
+      domainName: "consensus.deploybytes.com"
+  spec:
+    type: LoadBalancer
+    ports:
+    - name: main
+      port: 4200
+      targetPort: main
+      protocol: TCP
+    selector:
+      app: consensus
+      role: web
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    name: consensus
+    namespace: consensus
+  spec:
+    replicas: 3
+    strategy:
+      type: RollingUpdate
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: consensus
+        role: web
+    template:
+      metadata:
+        labels:
+          app: consensus
+          role: web
+      spec:
+        containers:
+        - name: main
+          image: index.docker.io/qpair/consensus:latest
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 100m
+              memory: 250Mi
+            requests:
+              cpu: 10m
+              memory: 125Mi
+          ports:
+          - name: main
+            containerPort: 4200
+        imagePullSecrets:
+          - name: myregistrykey
+

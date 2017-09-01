@@ -1,0 +1,2 @@
+I0810 15:18:24.405128    5158 worker.go:40] Waiting on: (/tmp/results/done)
+I0810 15:18:24.405165    5158 worker.go:53] Detected done file, transmitting: (/tmp/results/systemd_logs)

@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: powerdashtest
+spec:
+  replicas: 1
+  selector:
+    app: powerdashtest
+  template:
+    metadata:
+      labels:
+        app: powerdashtest
+    spec:
+      containers:
+      - name: powerdash
+        image: kokyj93/kafkaconsumertest
+        ports:
+        - containerPort: 2600
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: powerdashtest
+  labels:
+    app: powerdashtest
+spec:
+  ports:
+  - port: 2600
+    name: kafkaconsumer-port
+    targetPort: 2600
+    protocol: TCP
+  selector:
+    app: powerdashtest

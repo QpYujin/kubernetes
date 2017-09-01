@@ -1,0 +1,5 @@
+I0810 15:18:34.302356    4459 worker.go:40] Waiting on: (/tmp/results/done)
+I0810 15:18:34.302388    4459 worker.go:45] Sleeping
+I0810 15:18:35.302617    4459 worker.go:45] Sleeping
+I0810 15:18:36.302727    4459 worker.go:45] Sleeping
+I0810 15:18:37.302916    4459 worker.go:53] Detected done file, transmitting: (/tmp/results/systemd_logs)

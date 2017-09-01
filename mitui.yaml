@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: default
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: mitui
+    namespace: default
+    labels:
+      app: mitui
+      role: web
+    #  dns: route53
+    annotations:
+    #  domainName: "mitlabs.deploybytes.com"
+      external-dns.alpha.kubernetes.io/hostname: mitlab.deploybytes.com.
+  spec:
+    type: LoadBalancer
+    ports:
+    - name: web
+      port: 80
+      targetPort: web
+      protocol: TCP
+    selector:
+      app: mitui
+      role: web
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    name: mitui
+    namespace: default
+  spec:
+    replicas: 3
+    strategy:
+      type: RollingUpdate
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: mitui
+        role: web
+    template:
+      metadata:
+        labels:
+          app: mitui
+          role: web
+      spec:
+        containers:
+        - name: mitui
+          image: qpair/mitui:latest
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 100m
+              memory: 250Mi
+            requests:
+              cpu: 10m
+              memory: 125Mi
+          ports:
+          - name: web
+            containerPort: 4200
+        imagePullSecrets:
+        - name: myregistrykey
+

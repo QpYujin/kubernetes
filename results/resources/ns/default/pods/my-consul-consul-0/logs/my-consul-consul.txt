@@ -1,0 +1,39 @@
+Waiting for my-consul-consul-0.my-consul-consul to come up
+ping: bad address 'my-consul-consul-0.my-consul-consul.default.svc'
+Waiting for my-consul-consul-0.my-consul-consul to come up
+==> Starting Consul agent...
+==> Consul agent running!
+           Version: 'v0.8.3'
+           Node ID: 'b040a503-0fdc-6e8d-ef18-2c817aae9086'
+         Node name: 'my-consul-consul-0'
+        Datacenter: 'dc1'
+            Server: true (bootstrap: true)
+       Client Addr: 0.0.0.0 (HTTP: 8500, HTTPS: -1, DNS: 8600)
+      Cluster Addr: 100.96.1.7 (LAN: 8301, WAN: 8302)
+    Gossip encrypt: true, RPC-TLS: false, TLS-Incoming: false
+             Atlas: <disabled>
+
+==> Log data will now stream in as it occurs:
+
+    2017/08/10 15:16:30 [INFO] raft: Initial configuration (index=1): [{Suffrage:Voter ID:100.96.1.7:8300 Address:100.96.1.7:8300}]
+    2017/08/10 15:16:30 [INFO] raft: Node at 100.96.1.7:8300 [Follower] entering Follower state (Leader: "")
+    2017/08/10 15:16:30 [INFO] serf: EventMemberJoin: my-consul-consul-0 100.96.1.7
+    2017/08/10 15:16:30 [INFO] serf: EventMemberJoin: my-consul-consul-0.dc1 100.96.1.7
+    2017/08/10 15:16:30 [INFO] consul: Adding LAN server my-consul-consul-0 (Addr: tcp/100.96.1.7:8300) (DC: dc1)
+    2017/08/10 15:16:30 [INFO] consul: Handled member-join event for server "my-consul-consul-0.dc1" in area "wan"
+    2017/08/10 15:16:30 [INFO] agent: Joining cluster...
+    2017/08/10 15:16:30 [INFO] agent: (LAN) joining: [100.96.1.7]
+    2017/08/10 15:16:30 [INFO] agent: (LAN) joined: 1 Err: <nil>
+    2017/08/10 15:16:30 [INFO] agent: Join completed. Synced with 1 initial agents
+==> WARNING: BootstrapExpect Mode is specified as 1; this is the same as Bootstrap mode.
+==> WARNING: Bootstrap mode enabled! Do not enable unless necessary
+    2017/08/10 15:16:36 [WARN] raft: Heartbeat timeout from "" reached, starting election
+    2017/08/10 15:16:36 [INFO] raft: Node at 100.96.1.7:8300 [Candidate] entering Candidate state in term 2
+    2017/08/10 15:16:36 [INFO] raft: Election won. Tally: 1
+    2017/08/10 15:16:36 [INFO] raft: Node at 100.96.1.7:8300 [Leader] entering Leader state
+    2017/08/10 15:16:36 [INFO] consul: cluster leadership acquired
+    2017/08/10 15:16:36 [INFO] consul: New leader elected: my-consul-consul-0
+    2017/08/10 15:16:36 [INFO] agent: Synced service 'consul'
+    2017/08/10 15:16:36 [INFO] consul: member 'my-consul-consul-0' joined, marking health alive
+==> Newer Consul version available: 0.9.2 (currently running: 0.8.3)
+    2017/08/10 15:18:20 [INFO] agent: Synced service 'consul'

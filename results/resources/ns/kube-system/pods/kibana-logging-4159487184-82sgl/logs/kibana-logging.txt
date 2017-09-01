@@ -1,0 +1,12 @@
+ELASTICSEARCH_URL=http://elasticsearch-logging:9200
+server.basePath: ''
+{"type":"log","@timestamp":"2017-08-10T15:16:51Z","tags":["status","plugin:kibana@1.0.0","info"],"pid":6,"state":"green","message":"Status changed from uninitialized to green - Ready","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:51Z","tags":["status","plugin:elasticsearch@1.0.0","info"],"pid":6,"state":"yellow","message":"Status changed from uninitialized to yellow - Waiting for Elasticsearch","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:51Z","tags":["status","plugin:kbn_vislib_vis_types@1.0.0","info"],"pid":6,"state":"green","message":"Status changed from uninitialized to green - Ready","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:51Z","tags":["status","plugin:markdown_vis@1.0.0","info"],"pid":6,"state":"green","message":"Status changed from uninitialized to green - Ready","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:51Z","tags":["status","plugin:metric_vis@1.0.0","info"],"pid":6,"state":"green","message":"Status changed from uninitialized to green - Ready","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:52Z","tags":["status","plugin:spyModes@1.0.0","info"],"pid":6,"state":"green","message":"Status changed from uninitialized to green - Ready","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:52Z","tags":["status","plugin:statusPage@1.0.0","info"],"pid":6,"state":"green","message":"Status changed from uninitialized to green - Ready","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:52Z","tags":["status","plugin:table_vis@1.0.0","info"],"pid":6,"state":"green","message":"Status changed from uninitialized to green - Ready","prevState":"uninitialized","prevMsg":"uninitialized"}
+{"type":"log","@timestamp":"2017-08-10T15:16:52Z","tags":["listening","info"],"pid":6,"message":"Server running at http://0.0.0.0:5601"}
+{"type":"log","@timestamp":"2017-08-10T15:16:54Z","tags":["status","plugin:elasticsearch@1.0.0","error"],"pid":6,"state":"red","message":"Status changed from yellow to red - Request Timeout after 3000ms","prevState":"yellow","prevMsg":"Waiting for Elasticsearch"}

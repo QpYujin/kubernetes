@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-data
+  namespace: tarabalam
+  #annotations:
+    #volume.beta.kubernetes.io/storage-class: standard
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  namespace: tarabalam
+  labels:
+    app: redis
+    role: cache
+spec:
+  ports:
+  - name: cache
+    port: 6379
+    targetPort: cache
+    protocol: TCP
+  clusterIP: None
+  selector:
+    app: redis
+    role: cache
+---    
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: redis
+  namespace: tarabalam
+spec:
+  serviceName: redis
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+      role: cache
+  template:
+    metadata:
+      labels:
+        app: redis
+        version: 3.2.5
+        role: cache
+      annotations:
+        consul.register/enabled: "true"
+    spec:
+      containers:
+      - name: redis
+        image: redis:3.2.5
+        volumeMounts:
+        - mountPath: /data
+          name: redis-data
+        ports:
+        - name: cache
+          containerPort: 6379
+      volumes:
+        - name: redis-data
+          persistentVolumeClaim:
+            claimName: redis-data
+

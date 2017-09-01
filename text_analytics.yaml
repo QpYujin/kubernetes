@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: powerdash_call
+spec:
+  replicas: 1
+  selector:
+    app: powerdash
+  template:
+    metadata:
+      labels:
+        app: powerdash
+    spec:
+      containers:
+      - name: kafka
+        image: kokyj93/kafkaconsumer
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: powerdash
+  labels:
+    app: powerdash
+spec:
+  ports:
+  - port: 5000
+    name: kafkaconsumer-port
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: powerdash

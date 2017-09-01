@@ -1,0 +1,1266 @@
+/usr/local/bin/e2e.test --ginkgo.skip="Alpha|Disruptive|Feature|Flaky|Kubectl" --ginkgo.focus="Pods should be submitted and removed" --provider="local" --report-dir="/tmp/results" --ginkgo.noColor=true
+Aug 10 15:18:54.082: INFO: Overriding default scale value of zero to 1
+Aug 10 15:18:54.082: INFO: Overriding default milliseconds value of zero to 5000
+I0810 15:18:54.115844       6 e2e.go:344] Starting e2e run "389e4540-7ddf-11e7-9ea9-0a5864600304" on Ginkgo node 1
+Running Suite: Kubernetes e2e suite
+===================================
+Random Seed: 1502378333 - Will randomize all specs
+Will run 1 of 652 specs
+
+Aug 10 15:18:54.171: INFO: >>> kubeConfig: 
+Aug 10 15:18:54.172: INFO: Waiting up to 4h0m0s for all (but 0) nodes to be schedulable
+Aug 10 15:18:54.199: INFO: Waiting up to 10m0s for all pods (need at least 0) in namespace 'kube-system' to be running and ready
+Aug 10 15:18:54.214: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (0 seconds elapsed)
+Aug 10 15:18:54.214: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:18:54.214: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:18:54.214: INFO: 
+Aug 10 15:18:56.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (2 seconds elapsed)
+Aug 10 15:18:56.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:18:56.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:18:56.227: INFO: 
+Aug 10 15:18:58.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (4 seconds elapsed)
+Aug 10 15:18:58.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:18:58.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:18:58.227: INFO: 
+Aug 10 15:19:00.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (6 seconds elapsed)
+Aug 10 15:19:00.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:00.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:00.226: INFO: 
+Aug 10 15:19:02.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (8 seconds elapsed)
+Aug 10 15:19:02.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:02.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:02.226: INFO: 
+Aug 10 15:19:04.235: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (10 seconds elapsed)
+Aug 10 15:19:04.236: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:04.236: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:04.236: INFO: 
+Aug 10 15:19:06.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (12 seconds elapsed)
+Aug 10 15:19:06.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:06.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:06.227: INFO: 
+Aug 10 15:19:08.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (14 seconds elapsed)
+Aug 10 15:19:08.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:08.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:08.227: INFO: 
+Aug 10 15:19:10.231: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (16 seconds elapsed)
+Aug 10 15:19:10.231: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:10.231: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:10.231: INFO: 
+Aug 10 15:19:12.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (18 seconds elapsed)
+Aug 10 15:19:12.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:12.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:12.227: INFO: 
+Aug 10 15:19:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (20 seconds elapsed)
+Aug 10 15:19:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:14.227: INFO: 
+Aug 10 15:19:16.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (22 seconds elapsed)
+Aug 10 15:19:16.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:16.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:16.226: INFO: 
+Aug 10 15:19:18.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (24 seconds elapsed)
+Aug 10 15:19:18.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:18.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:18.227: INFO: 
+Aug 10 15:19:20.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (26 seconds elapsed)
+Aug 10 15:19:20.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:20.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:20.227: INFO: 
+Aug 10 15:19:22.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (28 seconds elapsed)
+Aug 10 15:19:22.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:22.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:22.226: INFO: 
+Aug 10 15:19:24.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (30 seconds elapsed)
+Aug 10 15:19:24.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:24.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:24.226: INFO: 
+Aug 10 15:19:26.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (32 seconds elapsed)
+Aug 10 15:19:26.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:26.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:26.226: INFO: 
+Aug 10 15:19:28.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (34 seconds elapsed)
+Aug 10 15:19:28.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:28.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:28.228: INFO: 
+Aug 10 15:19:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (36 seconds elapsed)
+Aug 10 15:19:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:30.227: INFO: 
+Aug 10 15:19:32.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (38 seconds elapsed)
+Aug 10 15:19:32.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:32.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:32.227: INFO: 
+Aug 10 15:19:34.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (40 seconds elapsed)
+Aug 10 15:19:34.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:34.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:34.227: INFO: 
+Aug 10 15:19:36.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (42 seconds elapsed)
+Aug 10 15:19:36.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:36.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:36.227: INFO: 
+Aug 10 15:19:38.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (44 seconds elapsed)
+Aug 10 15:19:38.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:38.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:38.227: INFO: 
+Aug 10 15:19:40.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (46 seconds elapsed)
+Aug 10 15:19:40.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:40.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:40.227: INFO: 
+Aug 10 15:19:42.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (48 seconds elapsed)
+Aug 10 15:19:42.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:42.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:42.227: INFO: 
+Aug 10 15:19:44.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (50 seconds elapsed)
+Aug 10 15:19:44.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:44.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:44.230: INFO: 
+Aug 10 15:19:46.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (52 seconds elapsed)
+Aug 10 15:19:46.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:46.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:46.228: INFO: 
+Aug 10 15:19:48.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (54 seconds elapsed)
+Aug 10 15:19:48.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:48.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:48.228: INFO: 
+Aug 10 15:19:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (56 seconds elapsed)
+Aug 10 15:19:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:50.227: INFO: 
+Aug 10 15:19:52.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (58 seconds elapsed)
+Aug 10 15:19:52.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:52.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:52.227: INFO: 
+Aug 10 15:19:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (60 seconds elapsed)
+Aug 10 15:19:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:54.227: INFO: 
+Aug 10 15:19:56.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (62 seconds elapsed)
+Aug 10 15:19:56.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:56.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:56.226: INFO: 
+Aug 10 15:19:58.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (64 seconds elapsed)
+Aug 10 15:19:58.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:19:58.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:19:58.226: INFO: 
+Aug 10 15:20:00.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (66 seconds elapsed)
+Aug 10 15:20:00.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:00.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:00.227: INFO: 
+Aug 10 15:20:02.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (68 seconds elapsed)
+Aug 10 15:20:02.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:02.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:02.227: INFO: 
+Aug 10 15:20:04.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (70 seconds elapsed)
+Aug 10 15:20:04.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:04.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:04.227: INFO: 
+Aug 10 15:20:06.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (72 seconds elapsed)
+Aug 10 15:20:06.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:06.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:06.228: INFO: 
+Aug 10 15:20:08.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (74 seconds elapsed)
+Aug 10 15:20:08.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:08.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:08.229: INFO: 
+Aug 10 15:20:10.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (76 seconds elapsed)
+Aug 10 15:20:10.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:10.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:10.227: INFO: 
+Aug 10 15:20:12.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (78 seconds elapsed)
+Aug 10 15:20:12.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:12.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:12.226: INFO: 
+Aug 10 15:20:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (80 seconds elapsed)
+Aug 10 15:20:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:14.227: INFO: 
+Aug 10 15:20:16.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (82 seconds elapsed)
+Aug 10 15:20:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:16.227: INFO: 
+Aug 10 15:20:18.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (84 seconds elapsed)
+Aug 10 15:20:18.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:18.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:18.228: INFO: 
+Aug 10 15:20:20.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (86 seconds elapsed)
+Aug 10 15:20:20.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:20.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:20.227: INFO: 
+Aug 10 15:20:22.264: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (88 seconds elapsed)
+Aug 10 15:20:22.264: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:22.264: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:22.264: INFO: 
+Aug 10 15:20:24.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (90 seconds elapsed)
+Aug 10 15:20:24.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:24.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:24.227: INFO: 
+Aug 10 15:20:26.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (92 seconds elapsed)
+Aug 10 15:20:26.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:26.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:26.227: INFO: 
+Aug 10 15:20:28.233: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (94 seconds elapsed)
+Aug 10 15:20:28.233: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:28.233: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:28.233: INFO: 
+Aug 10 15:20:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (96 seconds elapsed)
+Aug 10 15:20:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:30.227: INFO: 
+Aug 10 15:20:32.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (98 seconds elapsed)
+Aug 10 15:20:32.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:32.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:32.227: INFO: 
+Aug 10 15:20:34.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (100 seconds elapsed)
+Aug 10 15:20:34.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:34.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:34.226: INFO: 
+Aug 10 15:20:36.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (102 seconds elapsed)
+Aug 10 15:20:36.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:36.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:36.226: INFO: 
+Aug 10 15:20:38.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (104 seconds elapsed)
+Aug 10 15:20:38.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:38.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:38.227: INFO: 
+Aug 10 15:20:40.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (106 seconds elapsed)
+Aug 10 15:20:40.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:40.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:40.227: INFO: 
+Aug 10 15:20:42.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (108 seconds elapsed)
+Aug 10 15:20:42.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:42.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:42.226: INFO: 
+Aug 10 15:20:44.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (110 seconds elapsed)
+Aug 10 15:20:44.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:44.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:44.227: INFO: 
+Aug 10 15:20:46.236: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (112 seconds elapsed)
+Aug 10 15:20:46.236: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:46.236: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:46.236: INFO: 
+Aug 10 15:20:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (114 seconds elapsed)
+Aug 10 15:20:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:48.227: INFO: 
+Aug 10 15:20:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (116 seconds elapsed)
+Aug 10 15:20:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:50.227: INFO: 
+Aug 10 15:20:52.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (118 seconds elapsed)
+Aug 10 15:20:52.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:52.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:52.228: INFO: 
+Aug 10 15:20:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (120 seconds elapsed)
+Aug 10 15:20:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:54.227: INFO: 
+Aug 10 15:20:56.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (122 seconds elapsed)
+Aug 10 15:20:56.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:56.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:56.227: INFO: 
+Aug 10 15:20:58.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (124 seconds elapsed)
+Aug 10 15:20:58.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:20:58.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:20:58.226: INFO: 
+Aug 10 15:21:00.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (126 seconds elapsed)
+Aug 10 15:21:00.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:00.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:00.227: INFO: 
+Aug 10 15:21:02.259: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (128 seconds elapsed)
+Aug 10 15:21:02.259: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:02.259: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:02.259: INFO: 
+Aug 10 15:21:04.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (130 seconds elapsed)
+Aug 10 15:21:04.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:04.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:04.226: INFO: 
+Aug 10 15:21:06.236: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (132 seconds elapsed)
+Aug 10 15:21:06.236: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:06.236: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:06.236: INFO: 
+Aug 10 15:21:08.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (134 seconds elapsed)
+Aug 10 15:21:08.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:08.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:08.226: INFO: 
+Aug 10 15:21:10.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (136 seconds elapsed)
+Aug 10 15:21:10.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:10.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:10.227: INFO: 
+Aug 10 15:21:12.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (138 seconds elapsed)
+Aug 10 15:21:12.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:12.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:12.227: INFO: 
+Aug 10 15:21:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (140 seconds elapsed)
+Aug 10 15:21:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:14.227: INFO: 
+Aug 10 15:21:16.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (142 seconds elapsed)
+Aug 10 15:21:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:16.227: INFO: 
+Aug 10 15:21:18.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (144 seconds elapsed)
+Aug 10 15:21:18.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:18.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:18.230: INFO: 
+Aug 10 15:21:20.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (146 seconds elapsed)
+Aug 10 15:21:20.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:20.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:20.227: INFO: 
+Aug 10 15:21:22.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (148 seconds elapsed)
+Aug 10 15:21:22.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:22.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:22.227: INFO: 
+Aug 10 15:21:24.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (150 seconds elapsed)
+Aug 10 15:21:24.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:24.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:24.227: INFO: 
+Aug 10 15:21:26.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (152 seconds elapsed)
+Aug 10 15:21:26.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:26.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:26.229: INFO: 
+Aug 10 15:21:28.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (154 seconds elapsed)
+Aug 10 15:21:28.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:28.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:28.227: INFO: 
+Aug 10 15:21:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (156 seconds elapsed)
+Aug 10 15:21:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:30.227: INFO: 
+Aug 10 15:21:32.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (158 seconds elapsed)
+Aug 10 15:21:32.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:32.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:32.227: INFO: 
+Aug 10 15:21:34.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (160 seconds elapsed)
+Aug 10 15:21:34.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:34.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:34.227: INFO: 
+Aug 10 15:21:36.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (162 seconds elapsed)
+Aug 10 15:21:36.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:36.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:36.226: INFO: 
+Aug 10 15:21:38.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (164 seconds elapsed)
+Aug 10 15:21:38.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:38.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:38.227: INFO: 
+Aug 10 15:21:40.271: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (166 seconds elapsed)
+Aug 10 15:21:40.271: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:40.271: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:40.271: INFO: 
+Aug 10 15:21:42.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (168 seconds elapsed)
+Aug 10 15:21:42.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:42.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:42.228: INFO: 
+Aug 10 15:21:44.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (170 seconds elapsed)
+Aug 10 15:21:44.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:44.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:44.229: INFO: 
+Aug 10 15:21:46.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (172 seconds elapsed)
+Aug 10 15:21:46.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:46.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:46.227: INFO: 
+Aug 10 15:21:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (174 seconds elapsed)
+Aug 10 15:21:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:48.227: INFO: 
+Aug 10 15:21:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (176 seconds elapsed)
+Aug 10 15:21:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:50.227: INFO: 
+Aug 10 15:21:52.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (178 seconds elapsed)
+Aug 10 15:21:52.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:52.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:52.227: INFO: 
+Aug 10 15:21:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (180 seconds elapsed)
+Aug 10 15:21:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:54.227: INFO: 
+Aug 10 15:21:56.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (182 seconds elapsed)
+Aug 10 15:21:56.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:56.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:56.227: INFO: 
+Aug 10 15:21:58.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (184 seconds elapsed)
+Aug 10 15:21:58.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:21:58.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:21:58.226: INFO: 
+Aug 10 15:22:00.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (186 seconds elapsed)
+Aug 10 15:22:00.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:00.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:00.227: INFO: 
+Aug 10 15:22:02.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (188 seconds elapsed)
+Aug 10 15:22:02.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:02.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:02.227: INFO: 
+Aug 10 15:22:04.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (190 seconds elapsed)
+Aug 10 15:22:04.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:04.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:04.229: INFO: 
+Aug 10 15:22:06.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (192 seconds elapsed)
+Aug 10 15:22:06.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:06.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:06.228: INFO: 
+Aug 10 15:22:08.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (194 seconds elapsed)
+Aug 10 15:22:08.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:08.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:08.227: INFO: 
+Aug 10 15:22:10.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (196 seconds elapsed)
+Aug 10 15:22:10.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:10.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:10.226: INFO: 
+Aug 10 15:22:12.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (198 seconds elapsed)
+Aug 10 15:22:12.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:12.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:12.227: INFO: 
+Aug 10 15:22:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (200 seconds elapsed)
+Aug 10 15:22:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:14.227: INFO: 
+Aug 10 15:22:16.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (202 seconds elapsed)
+Aug 10 15:22:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:16.227: INFO: 
+Aug 10 15:22:18.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (204 seconds elapsed)
+Aug 10 15:22:18.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:18.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:18.227: INFO: 
+Aug 10 15:22:20.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (206 seconds elapsed)
+Aug 10 15:22:20.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:20.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:20.227: INFO: 
+Aug 10 15:22:22.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (208 seconds elapsed)
+Aug 10 15:22:22.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:22.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:22.227: INFO: 
+Aug 10 15:22:24.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (210 seconds elapsed)
+Aug 10 15:22:24.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:24.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:24.227: INFO: 
+Aug 10 15:22:26.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (212 seconds elapsed)
+Aug 10 15:22:26.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:26.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:26.227: INFO: 
+Aug 10 15:22:28.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (214 seconds elapsed)
+Aug 10 15:22:28.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:28.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:28.227: INFO: 
+Aug 10 15:22:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (216 seconds elapsed)
+Aug 10 15:22:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:30.227: INFO: 
+Aug 10 15:22:32.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (218 seconds elapsed)
+Aug 10 15:22:32.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:32.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:32.227: INFO: 
+Aug 10 15:22:34.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (220 seconds elapsed)
+Aug 10 15:22:34.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:34.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:34.227: INFO: 
+Aug 10 15:22:36.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (222 seconds elapsed)
+Aug 10 15:22:36.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:36.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:36.226: INFO: 
+Aug 10 15:22:38.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (224 seconds elapsed)
+Aug 10 15:22:38.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:38.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:38.227: INFO: 
+Aug 10 15:22:40.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (226 seconds elapsed)
+Aug 10 15:22:40.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:40.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:40.227: INFO: 
+Aug 10 15:22:42.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (228 seconds elapsed)
+Aug 10 15:22:42.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:42.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:42.227: INFO: 
+Aug 10 15:22:44.234: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (230 seconds elapsed)
+Aug 10 15:22:44.234: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:44.234: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:44.234: INFO: 
+Aug 10 15:22:46.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (232 seconds elapsed)
+Aug 10 15:22:46.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:46.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:46.227: INFO: 
+Aug 10 15:22:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (234 seconds elapsed)
+Aug 10 15:22:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:48.227: INFO: 
+Aug 10 15:22:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (236 seconds elapsed)
+Aug 10 15:22:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:50.227: INFO: 
+Aug 10 15:22:52.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (238 seconds elapsed)
+Aug 10 15:22:52.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:52.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:52.228: INFO: 
+Aug 10 15:22:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (240 seconds elapsed)
+Aug 10 15:22:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:54.227: INFO: 
+Aug 10 15:22:56.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (242 seconds elapsed)
+Aug 10 15:22:56.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:56.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:56.227: INFO: 
+Aug 10 15:22:58.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (244 seconds elapsed)
+Aug 10 15:22:58.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:22:58.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:22:58.227: INFO: 
+Aug 10 15:23:00.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (246 seconds elapsed)
+Aug 10 15:23:00.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:00.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:00.227: INFO: 
+Aug 10 15:23:02.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (248 seconds elapsed)
+Aug 10 15:23:02.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:02.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:02.227: INFO: 
+Aug 10 15:23:04.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (250 seconds elapsed)
+Aug 10 15:23:04.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:04.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:04.230: INFO: 
+Aug 10 15:23:06.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (252 seconds elapsed)
+Aug 10 15:23:06.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:06.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:06.227: INFO: 
+Aug 10 15:23:08.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (254 seconds elapsed)
+Aug 10 15:23:08.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:08.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:08.226: INFO: 
+Aug 10 15:23:10.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (256 seconds elapsed)
+Aug 10 15:23:10.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:10.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:10.227: INFO: 
+Aug 10 15:23:12.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (258 seconds elapsed)
+Aug 10 15:23:12.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:12.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:12.227: INFO: 
+Aug 10 15:23:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (260 seconds elapsed)
+Aug 10 15:23:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:14.227: INFO: 
+Aug 10 15:23:16.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (262 seconds elapsed)
+Aug 10 15:23:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:16.227: INFO: 
+Aug 10 15:23:18.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (264 seconds elapsed)
+Aug 10 15:23:18.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:18.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:18.228: INFO: 
+Aug 10 15:23:20.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (266 seconds elapsed)
+Aug 10 15:23:20.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:20.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:20.227: INFO: 
+Aug 10 15:23:22.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (268 seconds elapsed)
+Aug 10 15:23:22.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:22.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:22.227: INFO: 
+Aug 10 15:23:24.233: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (270 seconds elapsed)
+Aug 10 15:23:24.233: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:24.233: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:24.233: INFO: 
+Aug 10 15:23:26.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (272 seconds elapsed)
+Aug 10 15:23:26.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:26.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:26.227: INFO: 
+Aug 10 15:23:28.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (274 seconds elapsed)
+Aug 10 15:23:28.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:28.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:28.227: INFO: 
+Aug 10 15:23:30.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (276 seconds elapsed)
+Aug 10 15:23:30.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:30.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:30.226: INFO: 
+Aug 10 15:23:32.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (278 seconds elapsed)
+Aug 10 15:23:32.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:32.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:32.227: INFO: 
+Aug 10 15:23:34.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (280 seconds elapsed)
+Aug 10 15:23:34.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:34.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:34.229: INFO: 
+Aug 10 15:23:36.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (282 seconds elapsed)
+Aug 10 15:23:36.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:36.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:36.226: INFO: 
+Aug 10 15:23:38.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (284 seconds elapsed)
+Aug 10 15:23:38.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:38.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:38.227: INFO: 
+Aug 10 15:23:40.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (286 seconds elapsed)
+Aug 10 15:23:40.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:40.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:40.227: INFO: 
+Aug 10 15:23:42.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (288 seconds elapsed)
+Aug 10 15:23:42.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:42.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:42.228: INFO: 
+Aug 10 15:23:44.235: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (290 seconds elapsed)
+Aug 10 15:23:44.235: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:44.235: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:44.235: INFO: 
+Aug 10 15:23:46.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (292 seconds elapsed)
+Aug 10 15:23:46.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:46.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:46.227: INFO: 
+Aug 10 15:23:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (294 seconds elapsed)
+Aug 10 15:23:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:48.227: INFO: 
+Aug 10 15:23:50.262: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (296 seconds elapsed)
+Aug 10 15:23:50.262: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:50.262: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:50.262: INFO: 
+Aug 10 15:23:52.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (298 seconds elapsed)
+Aug 10 15:23:52.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:52.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:52.227: INFO: 
+Aug 10 15:23:54.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (300 seconds elapsed)
+Aug 10 15:23:54.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:54.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:54.228: INFO: 
+Aug 10 15:23:56.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (302 seconds elapsed)
+Aug 10 15:23:56.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:56.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:56.227: INFO: 
+Aug 10 15:23:58.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (304 seconds elapsed)
+Aug 10 15:23:58.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:23:58.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:23:58.226: INFO: 
+Aug 10 15:24:00.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (306 seconds elapsed)
+Aug 10 15:24:00.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:00.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:00.226: INFO: 
+Aug 10 15:24:02.236: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (308 seconds elapsed)
+Aug 10 15:24:02.236: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:02.236: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:02.236: INFO: 
+Aug 10 15:24:04.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (310 seconds elapsed)
+Aug 10 15:24:04.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:04.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:04.229: INFO: 
+Aug 10 15:24:06.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (312 seconds elapsed)
+Aug 10 15:24:06.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:06.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:06.229: INFO: 
+Aug 10 15:24:08.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (314 seconds elapsed)
+Aug 10 15:24:08.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:08.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:08.228: INFO: 
+Aug 10 15:24:10.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (316 seconds elapsed)
+Aug 10 15:24:10.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:10.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:10.227: INFO: 
+Aug 10 15:24:12.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (318 seconds elapsed)
+Aug 10 15:24:12.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:12.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:12.227: INFO: 
+Aug 10 15:24:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (320 seconds elapsed)
+Aug 10 15:24:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:14.227: INFO: 
+Aug 10 15:24:16.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (322 seconds elapsed)
+Aug 10 15:24:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:16.227: INFO: 
+Aug 10 15:24:18.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (324 seconds elapsed)
+Aug 10 15:24:18.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:18.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:18.227: INFO: 
+Aug 10 15:24:20.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (326 seconds elapsed)
+Aug 10 15:24:20.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:20.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:20.226: INFO: 
+Aug 10 15:24:22.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (328 seconds elapsed)
+Aug 10 15:24:22.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:22.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:22.229: INFO: 
+Aug 10 15:24:24.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (330 seconds elapsed)
+Aug 10 15:24:24.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:24.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:24.227: INFO: 
+Aug 10 15:24:26.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (332 seconds elapsed)
+Aug 10 15:24:26.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:26.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:26.227: INFO: 
+Aug 10 15:24:28.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (334 seconds elapsed)
+Aug 10 15:24:28.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:28.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:28.227: INFO: 
+Aug 10 15:24:30.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (336 seconds elapsed)
+Aug 10 15:24:30.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:30.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:30.226: INFO: 
+Aug 10 15:24:32.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (338 seconds elapsed)
+Aug 10 15:24:32.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:32.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:32.229: INFO: 
+Aug 10 15:24:34.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (340 seconds elapsed)
+Aug 10 15:24:34.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:34.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:34.230: INFO: 
+Aug 10 15:24:36.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (342 seconds elapsed)
+Aug 10 15:24:36.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:36.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:36.227: INFO: 
+Aug 10 15:24:38.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (344 seconds elapsed)
+Aug 10 15:24:38.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:38.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:38.227: INFO: 
+Aug 10 15:24:40.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (346 seconds elapsed)
+Aug 10 15:24:40.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:40.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:40.231: INFO: 
+Aug 10 15:24:42.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (348 seconds elapsed)
+Aug 10 15:24:42.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:42.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:42.227: INFO: 
+Aug 10 15:24:44.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (350 seconds elapsed)
+Aug 10 15:24:44.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:44.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:44.230: INFO: 
+Aug 10 15:24:46.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (352 seconds elapsed)
+Aug 10 15:24:46.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:46.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:46.226: INFO: 
+Aug 10 15:24:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (354 seconds elapsed)
+Aug 10 15:24:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:48.227: INFO: 
+Aug 10 15:24:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (356 seconds elapsed)
+Aug 10 15:24:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:50.227: INFO: 
+Aug 10 15:24:52.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (358 seconds elapsed)
+Aug 10 15:24:52.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:52.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:52.227: INFO: 
+Aug 10 15:24:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (360 seconds elapsed)
+Aug 10 15:24:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:54.227: INFO: 
+Aug 10 15:24:56.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (362 seconds elapsed)
+Aug 10 15:24:56.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:56.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:56.227: INFO: 
+Aug 10 15:24:58.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (364 seconds elapsed)
+Aug 10 15:24:58.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:24:58.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:24:58.226: INFO: 
+Aug 10 15:25:00.234: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (366 seconds elapsed)
+Aug 10 15:25:00.234: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:00.234: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:00.234: INFO: 
+Aug 10 15:25:02.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (368 seconds elapsed)
+Aug 10 15:25:02.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:02.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:02.226: INFO: 
+Aug 10 15:25:04.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (370 seconds elapsed)
+Aug 10 15:25:04.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:04.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:04.228: INFO: 
+Aug 10 15:25:06.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (372 seconds elapsed)
+Aug 10 15:25:06.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:06.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:06.227: INFO: 
+Aug 10 15:25:08.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (374 seconds elapsed)
+Aug 10 15:25:08.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:08.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:08.226: INFO: 
+Aug 10 15:25:10.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (376 seconds elapsed)
+Aug 10 15:25:10.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:10.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:10.226: INFO: 
+Aug 10 15:25:12.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (378 seconds elapsed)
+Aug 10 15:25:12.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:12.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:12.227: INFO: 
+Aug 10 15:25:14.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (380 seconds elapsed)
+Aug 10 15:25:14.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:14.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:14.230: INFO: 
+Aug 10 15:25:16.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (382 seconds elapsed)
+Aug 10 15:25:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:16.227: INFO: 
+Aug 10 15:25:18.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (384 seconds elapsed)
+Aug 10 15:25:18.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:18.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:18.228: INFO: 
+Aug 10 15:25:20.233: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (386 seconds elapsed)
+Aug 10 15:25:20.233: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:20.233: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:20.233: INFO: 
+Aug 10 15:25:22.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (388 seconds elapsed)
+Aug 10 15:25:22.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:22.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:22.227: INFO: 
+Aug 10 15:25:24.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (390 seconds elapsed)
+Aug 10 15:25:24.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:24.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:24.229: INFO: 
+Aug 10 15:25:26.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (392 seconds elapsed)
+Aug 10 15:25:26.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:26.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:26.226: INFO: 
+Aug 10 15:25:28.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (394 seconds elapsed)
+Aug 10 15:25:28.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:28.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:28.227: INFO: 
+Aug 10 15:25:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (396 seconds elapsed)
+Aug 10 15:25:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:30.227: INFO: 
+Aug 10 15:25:32.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (398 seconds elapsed)
+Aug 10 15:25:32.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:32.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:32.227: INFO: 
+Aug 10 15:25:34.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (400 seconds elapsed)
+Aug 10 15:25:34.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:34.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:34.227: INFO: 
+Aug 10 15:25:36.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (402 seconds elapsed)
+Aug 10 15:25:36.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:36.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:36.226: INFO: 
+Aug 10 15:25:38.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (404 seconds elapsed)
+Aug 10 15:25:38.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:38.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:38.229: INFO: 
+Aug 10 15:25:40.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (406 seconds elapsed)
+Aug 10 15:25:40.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:40.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:40.227: INFO: 
+Aug 10 15:25:42.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (408 seconds elapsed)
+Aug 10 15:25:42.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:42.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:42.227: INFO: 
+Aug 10 15:25:44.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (410 seconds elapsed)
+Aug 10 15:25:44.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:44.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:44.227: INFO: 
+Aug 10 15:25:46.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (412 seconds elapsed)
+Aug 10 15:25:46.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:46.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:46.227: INFO: 
+Aug 10 15:25:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (414 seconds elapsed)
+Aug 10 15:25:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:48.227: INFO: 
+Aug 10 15:25:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (416 seconds elapsed)
+Aug 10 15:25:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:50.227: INFO: 
+Aug 10 15:25:52.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (418 seconds elapsed)
+Aug 10 15:25:52.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:52.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:52.227: INFO: 
+Aug 10 15:25:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (420 seconds elapsed)
+Aug 10 15:25:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:54.227: INFO: 
+Aug 10 15:25:56.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (422 seconds elapsed)
+Aug 10 15:25:56.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:56.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:56.227: INFO: 
+Aug 10 15:25:58.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (424 seconds elapsed)
+Aug 10 15:25:58.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:25:58.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:25:58.230: INFO: 
+Aug 10 15:26:00.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (426 seconds elapsed)
+Aug 10 15:26:00.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:00.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:00.227: INFO: 
+Aug 10 15:26:02.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (428 seconds elapsed)
+Aug 10 15:26:02.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:02.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:02.227: INFO: 
+Aug 10 15:26:04.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (430 seconds elapsed)
+Aug 10 15:26:04.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:04.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:04.227: INFO: 
+Aug 10 15:26:06.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (432 seconds elapsed)
+Aug 10 15:26:06.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:06.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:06.227: INFO: 
+Aug 10 15:26:08.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (434 seconds elapsed)
+Aug 10 15:26:08.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:08.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:08.227: INFO: 
+Aug 10 15:26:10.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (436 seconds elapsed)
+Aug 10 15:26:10.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:10.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:10.227: INFO: 
+Aug 10 15:26:12.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (438 seconds elapsed)
+Aug 10 15:26:12.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:12.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:12.226: INFO: 
+Aug 10 15:26:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (440 seconds elapsed)
+Aug 10 15:26:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:14.227: INFO: 
+Aug 10 15:26:16.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (442 seconds elapsed)
+Aug 10 15:26:16.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:16.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:16.226: INFO: 
+Aug 10 15:26:18.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (444 seconds elapsed)
+Aug 10 15:26:18.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:18.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:18.230: INFO: 
+Aug 10 15:26:20.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (446 seconds elapsed)
+Aug 10 15:26:20.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:20.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:20.227: INFO: 
+Aug 10 15:26:22.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (448 seconds elapsed)
+Aug 10 15:26:22.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:22.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:22.227: INFO: 
+Aug 10 15:26:24.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (450 seconds elapsed)
+Aug 10 15:26:24.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:24.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:24.227: INFO: 
+Aug 10 15:26:26.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (452 seconds elapsed)
+Aug 10 15:26:26.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:26.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:26.227: INFO: 
+Aug 10 15:26:28.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (454 seconds elapsed)
+Aug 10 15:26:28.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:28.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:28.229: INFO: 
+Aug 10 15:26:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (456 seconds elapsed)
+Aug 10 15:26:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:30.227: INFO: 
+Aug 10 15:26:32.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (458 seconds elapsed)
+Aug 10 15:26:32.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:32.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:32.226: INFO: 
+Aug 10 15:26:34.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (460 seconds elapsed)
+Aug 10 15:26:34.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:34.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:34.228: INFO: 
+Aug 10 15:26:36.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (462 seconds elapsed)
+Aug 10 15:26:36.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:36.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:36.227: INFO: 
+Aug 10 15:26:38.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (464 seconds elapsed)
+Aug 10 15:26:38.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:38.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:38.230: INFO: 
+Aug 10 15:26:40.256: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (466 seconds elapsed)
+Aug 10 15:26:40.256: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:40.256: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:40.256: INFO: 
+Aug 10 15:26:42.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (468 seconds elapsed)
+Aug 10 15:26:42.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:42.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:42.227: INFO: 
+Aug 10 15:26:44.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (470 seconds elapsed)
+Aug 10 15:26:44.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:44.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:44.227: INFO: 
+Aug 10 15:26:46.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (472 seconds elapsed)
+Aug 10 15:26:46.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:46.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:46.227: INFO: 
+Aug 10 15:26:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (474 seconds elapsed)
+Aug 10 15:26:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:48.227: INFO: 
+Aug 10 15:26:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (476 seconds elapsed)
+Aug 10 15:26:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:50.227: INFO: 
+Aug 10 15:26:52.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (478 seconds elapsed)
+Aug 10 15:26:52.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:52.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:52.226: INFO: 
+Aug 10 15:26:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (480 seconds elapsed)
+Aug 10 15:26:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:54.227: INFO: 
+Aug 10 15:26:56.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (482 seconds elapsed)
+Aug 10 15:26:56.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:56.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:56.226: INFO: 
+Aug 10 15:26:58.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (484 seconds elapsed)
+Aug 10 15:26:58.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:26:58.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:26:58.229: INFO: 
+Aug 10 15:27:00.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (486 seconds elapsed)
+Aug 10 15:27:00.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:00.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:00.227: INFO: 
+Aug 10 15:27:02.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (488 seconds elapsed)
+Aug 10 15:27:02.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:02.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:02.227: INFO: 
+Aug 10 15:27:04.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (490 seconds elapsed)
+Aug 10 15:27:04.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:04.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:04.227: INFO: 
+Aug 10 15:27:06.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (492 seconds elapsed)
+Aug 10 15:27:06.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:06.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:06.227: INFO: 
+Aug 10 15:27:08.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (494 seconds elapsed)
+Aug 10 15:27:08.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:08.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:08.227: INFO: 
+Aug 10 15:27:10.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (496 seconds elapsed)
+Aug 10 15:27:10.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:10.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:10.227: INFO: 
+Aug 10 15:27:12.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (498 seconds elapsed)
+Aug 10 15:27:12.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:12.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:12.227: INFO: 
+Aug 10 15:27:14.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (500 seconds elapsed)
+Aug 10 15:27:14.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:14.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:14.227: INFO: 
+Aug 10 15:27:16.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (502 seconds elapsed)
+Aug 10 15:27:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:16.227: INFO: 
+Aug 10 15:27:18.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (504 seconds elapsed)
+Aug 10 15:27:18.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:18.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:18.230: INFO: 
+Aug 10 15:27:20.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (506 seconds elapsed)
+Aug 10 15:27:20.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:20.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:20.227: INFO: 
+Aug 10 15:27:22.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (508 seconds elapsed)
+Aug 10 15:27:22.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:22.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:22.227: INFO: 
+Aug 10 15:27:24.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (510 seconds elapsed)
+Aug 10 15:27:24.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:24.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:24.228: INFO: 
+Aug 10 15:27:26.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (512 seconds elapsed)
+Aug 10 15:27:26.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:26.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:26.226: INFO: 
+Aug 10 15:27:28.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (514 seconds elapsed)
+Aug 10 15:27:28.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:28.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:28.227: INFO: 
+Aug 10 15:27:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (516 seconds elapsed)
+Aug 10 15:27:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:30.227: INFO: 
+Aug 10 15:27:32.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (518 seconds elapsed)
+Aug 10 15:27:32.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:32.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:32.226: INFO: 
+Aug 10 15:27:34.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (520 seconds elapsed)
+Aug 10 15:27:34.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:34.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:34.226: INFO: 
+Aug 10 15:27:36.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (522 seconds elapsed)
+Aug 10 15:27:36.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:36.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:36.226: INFO: 
+Aug 10 15:27:38.234: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (524 seconds elapsed)
+Aug 10 15:27:38.235: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:38.235: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:38.235: INFO: 
+Aug 10 15:27:40.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (526 seconds elapsed)
+Aug 10 15:27:40.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:40.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:40.226: INFO: 
+Aug 10 15:27:42.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (528 seconds elapsed)
+Aug 10 15:27:42.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:42.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:42.227: INFO: 
+Aug 10 15:27:44.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (530 seconds elapsed)
+Aug 10 15:27:44.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:44.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:44.227: INFO: 
+Aug 10 15:27:46.230: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (532 seconds elapsed)
+Aug 10 15:27:46.230: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:46.230: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:46.230: INFO: 
+Aug 10 15:27:48.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (534 seconds elapsed)
+Aug 10 15:27:48.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:48.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:48.226: INFO: 
+Aug 10 15:27:50.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (536 seconds elapsed)
+Aug 10 15:27:50.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:50.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:50.228: INFO: 
+Aug 10 15:27:52.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (538 seconds elapsed)
+Aug 10 15:27:52.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:52.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:52.227: INFO: 
+Aug 10 15:27:54.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (540 seconds elapsed)
+Aug 10 15:27:54.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:54.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:54.227: INFO: 
+Aug 10 15:27:56.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (542 seconds elapsed)
+Aug 10 15:27:56.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:56.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:56.228: INFO: 
+Aug 10 15:27:58.229: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (544 seconds elapsed)
+Aug 10 15:27:58.229: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:27:58.229: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:27:58.229: INFO: 
+Aug 10 15:28:00.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (546 seconds elapsed)
+Aug 10 15:28:00.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:00.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:00.227: INFO: 
+Aug 10 15:28:02.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (548 seconds elapsed)
+Aug 10 15:28:02.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:02.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:02.227: INFO: 
+Aug 10 15:28:04.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (550 seconds elapsed)
+Aug 10 15:28:04.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:04.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:04.227: INFO: 
+Aug 10 15:28:06.268: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (552 seconds elapsed)
+Aug 10 15:28:06.268: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:06.268: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:06.268: INFO: 
+Aug 10 15:28:08.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (554 seconds elapsed)
+Aug 10 15:28:08.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:08.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:08.227: INFO: 
+Aug 10 15:28:10.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (556 seconds elapsed)
+Aug 10 15:28:10.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:10.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:10.227: INFO: 
+Aug 10 15:28:12.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (558 seconds elapsed)
+Aug 10 15:28:12.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:12.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:12.226: INFO: 
+Aug 10 15:28:14.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (560 seconds elapsed)
+Aug 10 15:28:14.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:14.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:14.226: INFO: 
+Aug 10 15:28:16.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (562 seconds elapsed)
+Aug 10 15:28:16.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:16.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:16.227: INFO: 
+Aug 10 15:28:18.233: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (564 seconds elapsed)
+Aug 10 15:28:18.233: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:18.233: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:18.233: INFO: 
+Aug 10 15:28:20.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (566 seconds elapsed)
+Aug 10 15:28:20.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:20.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:20.226: INFO: 
+Aug 10 15:28:22.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (568 seconds elapsed)
+Aug 10 15:28:22.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:22.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:22.226: INFO: 
+Aug 10 15:28:24.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (570 seconds elapsed)
+Aug 10 15:28:24.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:24.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:24.227: INFO: 
+Aug 10 15:28:26.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (572 seconds elapsed)
+Aug 10 15:28:26.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:26.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:26.227: INFO: 
+Aug 10 15:28:28.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (574 seconds elapsed)
+Aug 10 15:28:28.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:28.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:28.227: INFO: 
+Aug 10 15:28:30.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (576 seconds elapsed)
+Aug 10 15:28:30.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:30.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:30.227: INFO: 
+Aug 10 15:28:32.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (578 seconds elapsed)
+Aug 10 15:28:32.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:32.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:32.227: INFO: 
+Aug 10 15:28:34.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (580 seconds elapsed)
+Aug 10 15:28:34.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:34.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:34.227: INFO: 
+Aug 10 15:28:36.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (582 seconds elapsed)
+Aug 10 15:28:36.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:36.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:36.227: INFO: 
+Aug 10 15:28:38.235: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (584 seconds elapsed)
+Aug 10 15:28:38.235: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:38.235: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:38.235: INFO: 
+Aug 10 15:28:40.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (586 seconds elapsed)
+Aug 10 15:28:40.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:40.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:40.227: INFO: 
+Aug 10 15:28:42.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (588 seconds elapsed)
+Aug 10 15:28:42.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:42.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:42.226: INFO: 
+Aug 10 15:28:44.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (590 seconds elapsed)
+Aug 10 15:28:44.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:44.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:44.227: INFO: 
+Aug 10 15:28:46.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (592 seconds elapsed)
+Aug 10 15:28:46.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:46.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:46.227: INFO: 
+Aug 10 15:28:48.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (594 seconds elapsed)
+Aug 10 15:28:48.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:48.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:48.227: INFO: 
+Aug 10 15:28:50.227: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (596 seconds elapsed)
+Aug 10 15:28:50.227: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:50.227: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:50.227: INFO: 
+Aug 10 15:28:52.226: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (598 seconds elapsed)
+Aug 10 15:28:52.226: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:52.226: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:52.226: INFO: 
+Aug 10 15:28:54.228: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (600 seconds elapsed)
+Aug 10 15:28:54.228: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:54.228: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:54.228: INFO: 
+Aug 10 15:28:54.240: INFO: 20 / 20 pods in namespace 'kube-system' are running and ready (600 seconds elapsed)
+Aug 10 15:28:54.240: INFO: expected 11 pod replicas in namespace 'kube-system', 9 are Running and Ready.
+Aug 10 15:28:54.240: INFO: POD  NODE  PHASE  GRACE  CONDITIONS
+Aug 10 15:28:54.240: INFO: 
+Aug 10 15:28:54.240: INFO: Number of not-ready pods is allowed.
+Aug 10 15:28:54.246: INFO: Waiting for pods to enter Success, but no pods in "kube-system" match label map[name:e2e-image-puller]
+Aug 10 15:28:54.246: INFO: Dumping network health container logs from all nodes to file /tmp/results/nethealth.txt
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+------------------------------
+[k8s.io] Pods 
+  should be submitted and removed [Conformance]
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/common/pods.go:266
+[BeforeEach] [k8s.io] Pods
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/framework/framework.go:130
+STEP: Creating a kubernetes client
+Aug 10 15:28:54.250: INFO: >>> kubeConfig: 
+STEP: Building a namespace api object
+STEP: Waiting for a default service account to be provisioned in namespace
+[BeforeEach] [k8s.io] Pods
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/common/pods.go:128
+[It] should be submitted and removed [Conformance]
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/common/pods.go:266
+STEP: creating the pod
+STEP: setting up watch
+STEP: submitting the pod to kubernetes
+STEP: verifying the pod is in kubernetes
+STEP: verifying pod creation was observed
+Aug 10 15:29:02.297: INFO: running pod: &v1.Pod{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"pod-submit-remove-9e76bac9-7de0-11e7-9ea9-0a5864600304", GenerateName:"", Namespace:"e2e-tests-pods-s7sfh", SelfLink:"/api/v1/namespaces/e2e-tests-pods-s7sfh/pods/pod-submit-remove-9e76bac9-7de0-11e7-9ea9-0a5864600304", UID:"9e774d6e-7de0-11e7-bf00-0ea50f7b4c40", ResourceVersion:"2204", Generation:0, CreationTimestamp:v1.Time{Time:time.Time{sec:63637975734, nsec:0, loc:(*time.Location)(0x57683e0)}}, DeletionTimestamp:(*v1.Time)(nil), DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string{"time":"281701686", "name":"foo"}, Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Initializers:(*v1.Initializers)(nil), Finalizers:[]string(nil), ClusterName:""}, Spec:v1.PodSpec{Volumes:[]v1.Volume{v1.Volume{Name:"default-token-p15xd", VolumeSource:v1.VolumeSource{HostPath:(*v1.HostPathVolumeSource)(nil), EmptyDir:(*v1.EmptyDirVolumeSource)(nil), GCEPersistentDisk:(*v1.GCEPersistentDiskVolumeSource)(nil), AWSElasticBlockStore:(*v1.AWSElasticBlockStoreVolumeSource)(nil), GitRepo:(*v1.GitRepoVolumeSource)(nil), Secret:(*v1.SecretVolumeSource)(0xc42138cf40), NFS:(*v1.NFSVolumeSource)(nil), ISCSI:(*v1.ISCSIVolumeSource)(nil), Glusterfs:(*v1.GlusterfsVolumeSource)(nil), PersistentVolumeClaim:(*v1.PersistentVolumeClaimVolumeSource)(nil), RBD:(*v1.RBDVolumeSource)(nil), FlexVolume:(*v1.FlexVolumeSource)(nil), Cinder:(*v1.CinderVolumeSource)(nil), CephFS:(*v1.CephFSVolumeSource)(nil), Flocker:(*v1.FlockerVolumeSource)(nil), DownwardAPI:(*v1.DownwardAPIVolumeSource)(nil), FC:(*v1.FCVolumeSource)(nil), AzureFile:(*v1.AzureFileVolumeSource)(nil), ConfigMap:(*v1.ConfigMapVolumeSource)(nil), VsphereVolume:(*v1.VsphereVirtualDiskVolumeSource)(nil), Quobyte:(*v1.QuobyteVolumeSource)(nil), AzureDisk:(*v1.AzureDiskVolumeSource)(nil), PhotonPersistentDisk:(*v1.PhotonPersistentDiskVolumeSource)(nil), Projected:(*v1.ProjectedVolumeSource)(nil), PortworxVolume:(*v1.PortworxVolumeSource)(nil), ScaleIO:(*v1.ScaleIOVolumeSource)(nil), StorageOS:(*v1.StorageOSVolumeSource)(nil)}}}, InitContainers:[]v1.Container(nil), Containers:[]v1.Container{v1.Container{Name:"nginx", Image:"gcr.io/google_containers/nginx-slim:0.7", Command:[]string(nil), Args:[]string(nil), WorkingDir:"", Ports:[]v1.ContainerPort(nil), EnvFrom:[]v1.EnvFromSource(nil), Env:[]v1.EnvVar(nil), Resources:v1.ResourceRequirements{Limits:v1.ResourceList(nil), Requests:v1.ResourceList(nil)}, VolumeMounts:[]v1.VolumeMount{v1.VolumeMount{Name:"default-token-p15xd", ReadOnly:true, MountPath:"/var/run/secrets/kubernetes.io/serviceaccount", SubPath:""}}, LivenessProbe:(*v1.Probe)(nil), ReadinessProbe:(*v1.Probe)(nil), Lifecycle:(*v1.Lifecycle)(nil), TerminationMessagePath:"/dev/termination-log", TerminationMessagePolicy:"File", ImagePullPolicy:"IfNotPresent", SecurityContext:(*v1.SecurityContext)(nil), Stdin:false, StdinOnce:false, TTY:false}}, RestartPolicy:"Always", TerminationGracePeriodSeconds:(*int64)(0xc4202c5908), ActiveDeadlineSeconds:(*int64)(nil), DNSPolicy:"ClusterFirst", NodeSelector:map[string]string(nil), ServiceAccountName:"default", DeprecatedServiceAccount:"default", AutomountServiceAccountToken:(*bool)(nil), NodeName:"ip-172-20-54-156.ec2.internal", HostNetwork:false, HostPID:false, HostIPC:false, SecurityContext:(*v1.PodSecurityContext)(0xc42138cfc0), ImagePullSecrets:[]v1.LocalObjectReference(nil), Hostname:"", Subdomain:"", Affinity:(*v1.Affinity)(nil), SchedulerName:"default-scheduler", Tolerations:[]v1.Toleration{v1.Toleration{Key:"node.alpha.kubernetes.io/notReady", Operator:"Exists", Value:"", Effect:"NoExecute", TolerationSeconds:(*int64)(0xc4202c5940)}, v1.Toleration{Key:"node.alpha.kubernetes.io/unreachable", Operator:"Exists", Value:"", Effect:"NoExecute", TolerationSeconds:(*int64)(0xc4202c5960)}}, HostAliases:[]v1.HostAlias(nil)}, Status:v1.PodStatus{Phase:"Running", Conditions:[]v1.PodCondition{v1.PodCondition{Type:"Initialized", Status:"True", LastProbeTime:v1.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, LastTransitionTime:v1.Time{Time:time.Time{sec:63637975734, nsec:0, loc:(*time.Location)(0x57683e0)}}, Reason:"", Message:""}, v1.PodCondition{Type:"Ready", Status:"True", LastProbeTime:v1.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, LastTransitionTime:v1.Time{Time:time.Time{sec:63637975740, nsec:0, loc:(*time.Location)(0x57683e0)}}, Reason:"", Message:""}, v1.PodCondition{Type:"PodScheduled", Status:"True", LastProbeTime:v1.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, LastTransitionTime:v1.Time{Time:time.Time{sec:63637975734, nsec:0, loc:(*time.Location)(0x57683e0)}}, Reason:"", Message:""}}, Message:"", Reason:"", HostIP:"172.20.54.156", PodIP:"100.96.1.10", StartTime:(*v1.Time)(0xc42129b7c0), InitContainerStatuses:[]v1.ContainerStatus(nil), ContainerStatuses:[]v1.ContainerStatus{v1.ContainerStatus{Name:"nginx", State:v1.ContainerState{Waiting:(*v1.ContainerStateWaiting)(nil), Running:(*v1.ContainerStateRunning)(0xc42129b7e0), Terminated:(*v1.ContainerStateTerminated)(nil)}, LastTerminationState:v1.ContainerState{Waiting:(*v1.ContainerStateWaiting)(nil), Running:(*v1.ContainerStateRunning)(nil), Terminated:(*v1.ContainerStateTerminated)(nil)}, Ready:true, RestartCount:0, Image:"gcr.io/google_containers/nginx-slim:0.7", ImageID:"docker-pullable://gcr.io/google_containers/nginx-slim@sha256:dd4efd4c13bec2c6f3fe855deeab9524efe434505568421d4f31820485b3a795", ContainerID:"docker://e4d75d2d39bf8a1c6d460608c10c3515fcc632cf0c80c214f3ebc8b72cf84437"}}, QOSClass:"BestEffort"}}
+STEP: deleting the pod gracefully
+STEP: verifying the kubelet observed the termination notice
+STEP: verifying pod deletion was observed
+[AfterEach] [k8s.io] Pods
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/framework/framework.go:131
+Aug 10 15:29:15.893: INFO: Waiting up to 3m0s for all (but 0) nodes to be ready
+STEP: Destroying namespace "e2e-tests-pods-s7sfh" for this suite.
+Aug 10 15:29:21.946: INFO: namespace: e2e-tests-pods-s7sfh, resource: bindings, ignored listing per whitelist
+Aug 10 15:29:21.946: INFO: namespace e2e-tests-pods-s7sfh deletion completed in 6.051120042s
+
+• [SLOW TEST:27.697 seconds]
+[k8s.io] Pods
+/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/framework/framework.go:619
+  should be submitted and removed [Conformance]
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/common/pods.go:266
+------------------------------
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSAug 10 15:29:21.949: INFO: Running AfterSuite actions on all node
+Aug 10 15:29:21.949: INFO: Running AfterSuite actions on node 1
+Aug 10 15:29:21.950: INFO: Error running cluster/log-dump/log-dump.sh: fork/exec ../../cluster/log-dump/log-dump.sh: no such file or directory
+
+Ran 1 of 652 Specs in 627.779 seconds
+SUCCESS! -- 1 Passed | 0 Failed | 0 Pending | 651 Skipped PASS

@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kafkaconsumer
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: kafkaconsumer
+      role: web
+  template:
+    metadata:
+      labels:
+        app: kafkaconsumer
+        role: web
+    spec:
+      containers:
+      - name: main
+        image: index.docker.io/kokyj93/kafkaconsumer
+        imagePullPolicy: Always
+        command: [ "java", "-jar", "/home/client-0.0.1-SNAPSHOT.jar"]
+        resources:
+          limits:
+            cpu: 100m
+            memory: 250Mi
+          requests:
+            cpu: 10m
+            memory: 125Mi
+        ports:
+        - name: consumer
+          containerPort: 2600
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafkaconsumer
+  labels:
+    app: kafkaconsumer
+    role: web
+spec:
+  type: LoadBalancer
+  ports:
+  - name: main
+    port: 2600
+    targetPort: consumer
+    protocol: TCP
+  selector:
+    app: kafkaconsumer
+    role: web
+  

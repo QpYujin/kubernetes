@@ -1,0 +1,27 @@
+I0810 15:18:19.323589       1 loader.go:46] Scanning plugins in ./plugins.d (pwd: /)
+I0810 15:18:19.323620       1 loader.go:46] Scanning plugins in /etc/sonobuoy/plugins.d (pwd: /)
+I0810 15:18:19.328098       1 loader.go:46] Scanning plugins in ~/sonobuoy/plugins.d (pwd: /)
+I0810 15:18:19.362895       1 run.go:90] Running (systemd_logs) plugin
+I0810 15:18:19.363072       1 server.go:102] Listening for incoming results on 0.0.0.0:8080
+I0810 15:18:19.368466       1 run.go:90] Running (e2e) plugin
+I0810 15:18:24.417908       1 server.go:159] got systemd_logs result from ip-172-20-54-156.ec2.internal
+I0810 15:18:24.417937       1 aggregator.go:201] Creating directory /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/systemd_logs/results
+I0810 15:18:24.424930       1 aggregator.go:218] wrote results to /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/systemd_logs/results/ip-172-20-54-156.ec2.internal.json
+I0810 15:18:35.039696       1 server.go:159] got systemd_logs result from ip-172-20-55-121.ec2.internal
+I0810 15:18:35.039729       1 aggregator.go:201] Creating directory /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/systemd_logs/results
+I0810 15:18:35.071634       1 aggregator.go:218] wrote results to /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/systemd_logs/results/ip-172-20-55-121.ec2.internal.json
+I0810 15:18:37.299176       1 server.go:159] got systemd_logs result from ip-172-20-51-64.ec2.internal
+I0810 15:18:37.299210       1 aggregator.go:201] Creating directory /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/systemd_logs/results
+I0810 15:18:37.329476       1 aggregator.go:218] wrote results to /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/systemd_logs/results/ip-172-20-51-64.ec2.internal.json
+I0810 15:29:21.962434       1 server.go:201] got e2e result
+I0810 15:29:21.962469       1 aggregator.go:201] Creating directory /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/e2e
+I0810 15:29:21.962673       1 aggregator.go:218] wrote results to /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/plugins/e2e/results.tar.gz
+I0810 15:29:21.962754       1 queries.go:284] Running non-ns query
+I0810 15:29:22.484338       1 nodes.go:41] Collecting Node Configuration and Health...
+I0810 15:29:22.487076       1 nodes.go:55] Creating host results for ip-172-20-51-64.ec2.internal under /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/hosts/ip-172-20-51-64.ec2.internal
+I0810 15:29:22.500352       1 nodes.go:55] Creating host results for ip-172-20-54-156.ec2.internal under /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/hosts/ip-172-20-54-156.ec2.internal
+I0810 15:29:22.506079       1 nodes.go:55] Creating host results for ip-172-20-55-121.ec2.internal under /tmp/sonobuoy/4f72c75f-8aaf-4450-b028-0c095e6ed54c/hosts/ip-172-20-55-121.ec2.internal
+I0810 15:29:22.512391       1 queries.go:215] Running ns query (default)
+I0810 15:29:24.531989       1 pods.go:48] Collecting Pod Logs...
+I0810 15:29:24.936644       1 queries.go:215] Running ns query (heptio-sonobuoy)
+I0810 15:29:27.333148       1 pods.go:48] Collecting Pod Logs...

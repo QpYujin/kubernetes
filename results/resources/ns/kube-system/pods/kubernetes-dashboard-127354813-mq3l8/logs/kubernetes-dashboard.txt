@@ -1,0 +1,50 @@
+Using HTTP port: 9090
+Creating API server client for https://100.64.0.1:443
+Successful initial request to the apiserver, version: v1.6.2
+Creating in-cluster Heapster client
+Using service account token for csrf signing
+Getting application global configuration
+Application configuration {"serverTime":1502378324151}
+[2017-08-10T15:18:45Z] Incoming HTTP/1.1 GET /api/v1/workload/default?itemsPerPage=10&page=1 request from 172.20.55.121:34858
+Getting lists of all workloads
+[2017-08-10T15:18:45Z] Incoming HTTP/1.1 GET /api/v1/thirdpartyresource request from 172.20.55.121:34864
+Getting list of third party resources
+Getting pod metrics
+[2017-08-10T15:18:45Z] Outcoming response to 172.20.55.121:34864 with 200 status code
+[2017-08-10T15:18:45Z] Outcoming response to 172.20.55.121:34858 with 200 status code
+[2017-08-10T15:18:47Z] Incoming HTTP/1.1 GET /api/v1/namespace request from 172.20.55.121:34858
+Getting namespace list
+[2017-08-10T15:18:47Z] Outcoming response to 172.20.55.121:34858 with 200 status code
+[2017-08-10T15:18:50Z] Incoming HTTP/1.1 GET /api/v1/workload/heptio-sonobuoy?itemsPerPage=10&page=1 request from 172.20.55.121:34858
+Getting lists of all workloads
+Getting pod metrics
+[2017-08-10T15:18:50Z] Outcoming response to 172.20.55.121:34858 with 200 status code
+Getting application global configuration
+Application configuration {"serverTime":1502378361731}
+[2017-08-10T15:19:22Z] Incoming HTTP/1.1 GET /api/v1/thirdpartyresource request from 172.20.55.121:34864
+Getting list of third party resources
+[2017-08-10T15:19:22Z] Incoming HTTP/1.1 GET /api/v1/workload/heptio-sonobuoy?itemsPerPage=10&page=1 request from 172.20.55.121:34858
+Getting lists of all workloads
+Getting pod metrics
+[2017-08-10T15:19:22Z] Outcoming response to 172.20.55.121:34864 with 200 status code
+[2017-08-10T15:19:22Z] Outcoming response to 172.20.55.121:34858 with 200 status code
+[2017-08-10T15:19:26Z] Incoming HTTP/1.1 GET /api/v1/daemonset/heptio-sonobuoy/sonobuoy-systemd-logs-daemonset-1ec734112d7b40b0 request from 172.20.55.121:34864
+Getting details of sonobuoy-systemd-logs-daemonset-1ec734112d7b40b0 daemon set in heptio-sonobuoy namespace
+Getting replication controller sonobuoy-systemd-logs-daemonset-1ec734112d7b40b0 pods in namespace heptio-sonobuoy
+Getting pod metrics
+Getting events related to sonobuoy-systemd-logs-daemonset-1ec734112d7b40b0 daemon set in heptio-sonobuoy namespace
+Found 10 events related to sonobuoy-systemd-logs-daemonset-1ec734112d7b40b0 daemon set in heptio-sonobuoy namespace
+[2017-08-10T15:19:26Z] Outcoming response to 172.20.55.121:34864 with 200 status code
+[2017-08-10T15:19:32Z] Incoming HTTP/1.1 GET /api/v1/workload/heptio-sonobuoy?itemsPerPage=10&page=1 request from 172.20.55.121:34864
+Getting lists of all workloads
+Getting pod metrics
+[2017-08-10T15:19:32Z] Outcoming response to 172.20.55.121:34864 with 200 status code
+[2017-08-10T15:19:41Z] Incoming HTTP/1.1 GET /api/v1/pod/heptio-sonobuoy/sonobuoy-e2e-job-8109ee14c9704d70 request from 172.20.55.121:34864
+Getting details of sonobuoy-e2e-job-8109ee14c9704d70 pod in heptio-sonobuoy namespace
+Getting pod metrics
+Found 10 events related to sonobuoy-e2e-job-8109ee14c9704d70 pod in heptio-sonobuoy namespace
+[2017-08-10T15:19:41Z] Outcoming response to 172.20.55.121:34864 with 200 status code
+[2017-08-10T15:19:43Z] Incoming HTTP/1.1 GET /api/v1/pod/heptio-sonobuoy/sonobuoy-e2e-job-8109ee14c9704d70/log/e2e request from 172.20.55.121:34864
+[2017-08-10T15:19:43Z] Incoming HTTP/1.1 GET /api/v1/pod/heptio-sonobuoy/sonobuoy-e2e-job-8109ee14c9704d70/container request from 172.20.55.121:35000
+[2017-08-10T15:19:43Z] Outcoming response to 172.20.55.121:35000 with 200 status code
+[2017-08-10T15:19:43Z] Outcoming response to 172.20.55.121:34864 with 200 status code

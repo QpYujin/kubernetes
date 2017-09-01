@@ -1,0 +1,57 @@
+Flag --resource-container has been deprecated, This feature will be removed in a later release.
+I0810 15:12:16.163833       6 iptables.go:175] Could not connect to D-Bus system bus: dial unix /var/run/dbus/system_bus_socket: connect: no such file or directory
+I0810 15:12:16.163877       6 server.go:173] setting OOM scores is unsupported in this build
+I0810 15:12:16.167018       6 server.go:225] Using iptables Proxier.
+W0810 15:12:16.167366       6 server.go:469] Failed to retrieve node info: Get https://127.0.0.1/api/v1/nodes/ip-172-20-55-121: dial tcp 127.0.0.1:443: getsockopt: connection refused
+W0810 15:12:16.167446       6 proxier.go:293] invalid nodeIP, initializing kube-proxy with 127.0.0.1 as nodeIP
+I0810 15:12:16.167465       6 server.go:249] Tearing down userspace rules.
+E0810 15:12:16.176208       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:16.176281       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:17.176725       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:17.177705       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:18.177213       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:18.178233       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:19.177680       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:19.178606       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:20.178144       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:20.179148       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:21.178631       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:21.179455       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:22.179150       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:22.180093       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:23.179626       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:23.180578       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:24.180129       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:24.181117       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:25.180621       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:25.181546       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:26.181141       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:26.182015       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:27.181697       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:46: Failed to list *api.Service: Get https://127.0.0.1/api/v1/services?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+E0810 15:12:27.182548       6 reflector.go:201] k8s.io/kubernetes/pkg/proxy/config/api.go:49: Failed to list *api.Endpoints: Get https://127.0.0.1/api/v1/endpoints?resourceVersion=0: dial tcp 127.0.0.1:443: getsockopt: connection refused
+I0810 15:12:28.276132       6 proxier.go:472] Adding new service "kube-system/kube-dns:dns" at 100.64.0.10:53/UDP
+I0810 15:12:28.276308       6 proxier.go:472] Adding new service "kube-system/kube-dns:dns-tcp" at 100.64.0.10:53/TCP
+I0810 15:12:28.276359       6 proxier.go:472] Adding new service "default/kubernetes:https" at 100.64.0.1:443/TCP
+I0810 15:12:28.276211       6 conntrack.go:81] Set sysctl 'net/netfilter/nf_conntrack_max' to 262144
+I0810 15:12:28.276432       6 proxier.go:741] Not syncing iptables until Services and Endpoints have been received from master
+I0810 15:12:28.276457       6 proxier.go:540] Received first Endpoints update
+I0810 15:12:28.277166       6 conntrack.go:66] Setting conntrack hashsize to 65536
+I0810 15:12:28.277515       6 conntrack.go:81] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_established' to 86400
+I0810 15:12:28.277551       6 conntrack.go:81] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_close_wait' to 3600
+E0810 15:12:28.580739       6 event.go:199] Server rejected event '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"ip-172-20-55-121.14d984c8b5771b5f", GenerateName:"", Namespace:"default", SelfLink:"", UID:"", ResourceVersion:"", Generation:0, CreationTimestamp:v1.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, DeletionTimestamp:(*v1.Time)(nil), DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ClusterName:""}, InvolvedObject:v1.ObjectReference{Kind:"Node", Namespace:"", Name:"ip-172-20-55-121", UID:"ip-172-20-55-121", APIVersion:"", ResourceVersion:"", FieldPath:""}, Reason:"Starting", Message:"Starting kube-proxy.", Source:v1.EventSource{Component:"kube-proxy", Host:"ip-172-20-55-121"}, FirstTimestamp:v1.Time{Time:time.Time{sec:63637974748, nsec:277578591, loc:(*time.Location)(0x26f0a40)}}, LastTimestamp:v1.Time{Time:time.Time{sec:63637974748, nsec:277578591, loc:(*time.Location)(0x26f0a40)}}, Count:1, Type:"Normal"}': 'dial tcp 127.0.0.1:4002: getsockopt: connection refused' (will not retry!)
+I0810 15:13:36.432807       6 proxier.go:716] Deleting connection tracking state for service IP 100.64.0.10, endpoint IP 100.96.2.2
+I0810 15:13:36.514834       6 proxier.go:716] Deleting connection tracking state for service IP 100.64.0.10, endpoint IP 100.96.1.3
+I0810 15:15:42.842647       6 proxier.go:472] Adding new service "kube-system/kubernetes-dashboard:" at 100.68.92.104:80/TCP
+I0810 15:15:43.184575       6 proxier.go:472] Adding new service "kube-system/heapster:" at 100.66.203.144:80/TCP
+I0810 15:15:44.253060       6 proxier.go:472] Adding new service "kube-system/tiller-deploy:tiller" at 100.66.89.77:44134/TCP
+I0810 15:15:55.196650       6 proxier.go:472] Adding new service "default/my-consul-consul-ui:http" at 100.70.6.31:8500/TCP
+I0810 15:15:55.217902       6 proxier.go:1374] Opened local port "nodePort for default/my-consul-consul-ui:http" (:31929/tcp)
+I0810 15:15:58.457251       6 proxier.go:474] Updating existing service "default/my-consul-consul-ui:http" at 100.70.6.31:8500/TCP
+I0810 15:16:04.632170       6 proxier.go:472] Adding new service "kube-system/elasticsearch-logging:" at 100.65.205.215:9200/TCP
+I0810 15:16:10.194142       6 proxier.go:472] Adding new service "kube-system/kibana-logging:" at 100.69.143.105:5601/TCP
+I0810 15:16:10.207956       6 proxier.go:1374] Opened local port "nodePort for kube-system/kibana-logging:" (:32275/tcp)
+I0810 15:16:13.424826       6 proxier.go:474] Updating existing service "kube-system/kibana-logging:" at 100.69.143.105:5601/TCP
+I0810 15:16:15.811891       6 proxier.go:472] Adding new service "kube-system/fluentd-logging:fluentd" at 100.66.157.14:24224/TCP
+I0810 15:16:15.828795       6 proxier.go:1374] Opened local port "nodePort for kube-system/fluentd-logging:fluentd" (:32499/tcp)
+I0810 15:16:18.408370       6 proxier.go:474] Updating existing service "kube-system/fluentd-logging:fluentd" at 100.66.157.14:24224/TCP
+I0810 15:18:04.762078       6 proxier.go:472] Adding new service "heptio-sonobuoy/sonobuoy-master:" at 100.70.69.240:8080/TCP

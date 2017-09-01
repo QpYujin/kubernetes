@@ -1,0 +1,23 @@
+[main] 2017/08/10 15:15:49 Starting Tiller v2.5.0 (tls=false)
+[main] 2017/08/10 15:15:49 GRPC listening on :44134
+[main] 2017/08/10 15:15:49 Probes listening on :44135
+[main] 2017/08/10 15:15:49 Storage driver is ConfigMap
+[tiller] 2017/08/10 15:15:54 preparing install for my-consul
+[storage] 2017/08/10 15:15:54 getting release history for "my-consul"
+[tiller] 2017/08/10 15:15:54 rendering consul chart using values
+[tiller] 2017/08/10 15:15:54 performing install for my-consul
+[tiller] 2017/08/10 15:15:54 executing 1 pre-install hooks for my-consul
+[tiller] 2017/08/10 15:15:54 hooks complete for pre-install my-consul
+[storage] 2017/08/10 15:15:54 getting release history for "my-consul"
+[kube] 2017/08/10 15:15:54 building resources from manifest
+[kube] 2017/08/10 15:15:55 creating 5 resource(s)
+[tiller] 2017/08/10 15:15:55 executing 1 post-install hooks for my-consul
+[tiller] 2017/08/10 15:15:55 hooks complete for post-install my-consul
+[storage] 2017/08/10 15:15:55 creating release "my-consul.v1"
+[storage] 2017/08/10 15:15:55 getting last revision of "my-consul"
+[storage] 2017/08/10 15:15:55 getting release history for "my-consul"
+[kube] 2017/08/10 15:15:55 Doing get for Secret: "my-consul-consul-gossip-key"
+[kube] 2017/08/10 15:15:55 Doing get for ConfigMap: "my-consul-consul-tests"
+[kube] 2017/08/10 15:15:55 Doing get for Service: "my-consul-consul-ui"
+[kube] 2017/08/10 15:15:55 Doing get for Service: "my-consul-consul"
+[kube] 2017/08/10 15:15:55 Doing get for StatefulSet: "my-consul-consul"

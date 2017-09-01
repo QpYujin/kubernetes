@@ -1,0 +1,32 @@
+I0810 15:08:49.203576       1 autoscaler.go:49] Scaling Namespace: kube-system, Target: deployment/kube-dns
+I0810 15:08:49.238581       1 autoscaler_server.go:133] ConfigMap not found: configmaps "kube-dns-autoscaler" not found, will create one with default params
+I0810 15:08:49.242233       1 k8sclient.go:117] Created ConfigMap kube-dns-autoscaler in namespace kube-system
+I0810 15:08:49.242248       1 plugin.go:50] Set control mode to linear
+I0810 15:08:49.242268       1 linear_controller.go:59] ConfigMap version change (old:  new: 393) - rebuilding params
+I0810 15:08:49.242273       1 linear_controller.go:60] Params from apiserver: 
+{"coresPerReplica":256,"nodesPerReplica":16,"preventSinglePointFailure":true}
+I0810 15:08:49.242335       1 linear_controller.go:79] Defaulting min replicas count to 1 for linear controller
+I0810 15:08:49.244534       1 k8sclient.go:179] Cluster status: SchedulableNodes[3], SchedulableCores[5]
+I0810 15:08:49.244548       1 k8sclient.go:180] Replicas are not as expected : updating replicas from 1 to 2
+E0810 15:12:09.204766       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: i/o timeout
+E0810 15:12:11.950643       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:12:20.950687       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:12:29.950895       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:12:41.950624       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:12:50.951004       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:12:59.950958       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:13:11.950978       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:13:20.950701       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:13:29.950694       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:13:41.950824       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:13:50.950657       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:13:59.950671       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:14:11.950620       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:14:20.951375       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:14:29.950666       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:14:41.950736       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:14:50.951097       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:14:59.950948       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:15:11.950638       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:15:20.950943       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
+E0810 15:15:29.950894       1 autoscaler_server.go:86] Error while getting cluster status: Get https://100.64.0.1:443/api/v1/nodes: dial tcp 100.64.0.1:443: getsockopt: no route to host
